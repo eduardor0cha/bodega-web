@@ -1,0 +1,23 @@
+<html>
+  <head>
+    {% load static %}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="{% static 'app_bodega_web/styles.css' %}"/>
+    <title>Bodega Web</title>
+  </head>
+  <body>
+    <nav class="c-navbar">
+      <i class="fa-solid fa-bars fa-xl"></i>
+      <h1>Bodega</h1>
+      <i class="fa-solid fa-cart-shopping fa-xl"></i>
+    </nav>
+    <main>
+      {% block main %}{% endblock %}
+    </main>
+  </body>
+</html>

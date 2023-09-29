@@ -1,20 +1,6 @@
-<html>
-  <head>
-    {% load static %}
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
-    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
-    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+{% extends "user/base.html" %}
 
-    <link rel="stylesheet" href="{% static 'app_bodega_web/styles.css' %}"/>
-    <title>Bodega Web</title>
-  </head>
-  <body>
-    <nav class="p-home__navbar">
-      <i class="fa-solid fa-bars fa-xl"></i>
-      <h1>Bodega</h1>
-      <i class="fa-solid fa-cart-shopping fa-xl"></i>
-    </nav>
-  </body>
-</html>
+{% block main %}
+  <div class="c-input"><input placeholder="Buscar na Bodega"/><i class="fa-solid fa-magnifying-glass fa-xl"></i></div>
+  <h2>Melhores ofertas</h2>
+{% endblock %}
