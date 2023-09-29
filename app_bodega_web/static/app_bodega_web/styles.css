@@ -1,0 +1,16 @@
+@import "./reset.css";
+
+.p-home__navbar {
+  background-color: #335BE7;
+  height: 64px;
+  padding: 0 16px;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.p-home__navbar h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
