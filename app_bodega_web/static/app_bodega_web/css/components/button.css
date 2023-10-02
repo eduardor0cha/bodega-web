@@ -1,0 +1,15 @@
+.c-button {
+  border: none;
+  border-radius: 4px;
+  background-color: #335BE7;
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 1rem;
+  height: 40px;
+}
+
+.c-button.outline {
+  border: 1px solid #335BE7;
+  background: none;
+  color: #335BE7;
+}

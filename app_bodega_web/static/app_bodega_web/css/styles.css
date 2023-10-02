@@ -1,0 +1,29 @@
+@import "./reset.css";
+
+/* Páginas */
+@import "./pages/home.css";
+@import "./pages/product.css";
+
+/* Componentes */
+@import "./components/product-card.css";
+@import "./components/navbar.css";
+@import "./components/search-bar.css";
+@import "./components/button.css";
+@import "./components/sidebar.css";
+
+body {
+  background-color: #E2EAF8;
+}
+
+main {
+  margin-top: 64px;
+}
+
+.bizarre-comment {
+  text-decoration: line-through;
+  font-style: italic;
+}
+
+.bizarre-comment.transparent {
+  opacity: 0.2;
+}

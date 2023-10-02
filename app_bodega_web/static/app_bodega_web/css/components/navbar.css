@@ -1,0 +1,25 @@
+.c-navbar {
+  background-color: #335BE7;
+  height: 64px;
+  padding: 0 16px;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.c-navbar h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.c-navbar h1:hover {
+  cursor: pointer;
+}
+
+#c-header__open-sidebar-button:hover {
+  cursor: pointer;
+}

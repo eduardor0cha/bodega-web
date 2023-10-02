@@ -1,23 +1,36 @@
 <html>
   <head>
-    {% load static %}
+    {% load static %}  
+    {% load custom_tags %}
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
 
-    <link rel="stylesheet" href="{% static 'app_bodega_web/styles.css' %}"/>
+    <link rel="stylesheet" href="{% static 'app_bodega_web/css/styles.css' %}"/>
     <title>Bodega Web</title>
   </head>
   <body>
+    <div class="c-sidebar c-sidebar--isHidden" id="c-sidebar">
+      <div class="c-sidebar__header">
+        <i class="fa-solid fa-xmark fa-xl" id="c-sidebar__close-sidebar-button"></i>
+      </div>
+      <ul class="c-sidebar-menu">
+        <a href="/" class="c-sidebar-menu__item {% if selectedCategory == '' %}c-sidebar-menu__item--selected{% endif %}"><li>Todos</li></a>
+        {% for category in productCategories %}
+          <a class="c-sidebar-menu__item  {% if selectedCategory == category|index:0 %}c-sidebar-menu__item--selected{% endif %}" href="/?categoria={{category|index:0}}"><li>{{category|index:1}}</li></a>
+        {% endfor %}
+      </ul>
+    </div>
     <nav class="c-navbar">
-      <i class="fa-solid fa-bars fa-xl"></i>
-      <h1>Bodega</h1>
+      <i class="fa-solid fa-bars fa-xl" id="c-header__open-sidebar-button"></i>
+      <h1 onclick="location.href = '/'">Bodega</h1>
       <i class="fa-solid fa-cart-shopping fa-xl"></i>
     </nav>
     <main>
       {% block main %}{% endblock %}
     </main>
   </body>
+  <script src="../../static/app_bodega_web/js/script.js"></script>
 </html>

@@ -1,0 +1,37 @@
+{% extends "user/base.html" %}
+
+{% block main %}
+  {% load custom_tags %}
+  {% load humanize %}
+  <div class="p-product">
+    {% if product == None %}
+      <span>Produto não encontrado</span>
+    {% else %}
+      <img src={{product.imageUrl}} class="p-product__img"/>
+      <div class="p-product__info">
+        <span class="p-product__name">{{product.name}}</span>
+        {% if product.discount == 0 %}
+          <span class="p-product__value">R$ {{product.value}}</span>
+        {% else %}
+          <div class="p-product__values-info">
+            <span class="p-product__old-value">R$ {{product.value | stringformat:".2f" | intcomma}}</span>
+            <span class="p-product__value">R$ {{product.value | calcDiscount:product.discount | stringformat:".2f" | intcomma}}</span>
+            <span class="p-product__discount">({{product.discount | multiply:100 | stringformat:".1f"}}% de desconto)</span>
+          </div>
+        {% endif %}
+        <span>Estoque: {{product.stock}}</span>
+        <div class="p-product__freight-info">
+          <i class="fa-solid fa-truck fa-xl" style="display: flex; align-items: center; height: 30px;"></i>
+          <div>
+            <span>Frete grátis para todo o mundo!</span>
+            <p>Receba em até 1 hora <span class="bizarre-comment transparent">(estamos sempre pertinho de você heheheh)</span></p>
+          </div>
+        </div>
+        <button class="c-button">COMPRAR</button>
+        <button class="c-button outline">ADICIONAR AO CARRINHO</button>
+        <span class="p-product__description">Descrição</span>
+        <p>{{product.description | linebreaks }}</p>
+      </div>
+    {% endif %}
+  </div>
+{% endblock %}    

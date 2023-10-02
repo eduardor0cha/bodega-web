@@ -1,0 +1,42 @@
+.c-search-bar {
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #D6D6D6;
+  background-color: #FFFFFF;
+}
+
+.c-search-bar {
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #D6D6D6;
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+}
+
+.c-search-bar input {
+  margin-left: 16px;
+  height: 100%;
+  width: 100%;
+  border: none;
+}
+
+.c-search-bar input:focus {
+  outline: none;
+}
+
+.c-search-bar button {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: none;
+}
+
+.c-search-bar .fa-magnifying-glass {
+  width: 40px;
+  text-align: center;
+  color: #787878;
+}
