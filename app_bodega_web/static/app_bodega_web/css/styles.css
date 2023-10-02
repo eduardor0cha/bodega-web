@@ -3,6 +3,7 @@
 /* Páginas */
 @import "./pages/home.css";
 @import "./pages/product.css";
+@import "./pages/buy-product.css";
 
 /* Componentes */
 @import "./components/product-card.css";
@@ -10,6 +11,7 @@
 @import "./components/search-bar.css";
 @import "./components/button.css";
 @import "./components/sidebar.css";
+@import "./components/input.css";
 
 body {
   background-color: #E2EAF8;

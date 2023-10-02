@@ -5,7 +5,7 @@
   {% load humanize %}
   <div class="p-product">
     {% if product == None %}
-      <span>Produto não encontrado</span>
+      <span class="p-product__heading">Produto não encontrado</span>
     {% else %}
       <img src={{product.imageUrl}} class="p-product__img"/>
       <div class="p-product__info">
@@ -27,7 +27,7 @@
             <p>Receba em até 1 hora <span class="bizarre-comment transparent">(estamos sempre pertinho de você heheheh)</span></p>
           </div>
         </div>
-        <button class="c-button">COMPRAR</button>
+        <button class="c-button" onclick="location.href = `{% url 'buy-product' product.id %}`">COMPRAR</button>
         <button class="c-button outline">ADICIONAR AO CARRINHO</button>
         <span class="p-product__description">Descrição</span>
         <p>{{product.description | linebreaks }}</p>

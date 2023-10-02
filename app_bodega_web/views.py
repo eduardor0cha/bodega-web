@@ -1,3 +1,4 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
 from app_bodega_web.models import Product
@@ -45,3 +46,27 @@ def productPage(request, id):
         return render(request, "user/product.html", {"product": product})
     except:
         return render(request, "user/product.html", {"product": None})
+
+
+def buyProduct(request, id):
+    try:
+        product = Product.objects.get(id=id)
+        return render(request, "user/buy.html", {"product": product})
+    except:
+        return render(request, "user/buy.html", {"product": None})
+
+
+def finalizeThePurchase(request, id):
+    try:
+        product = Product.objects.get(id=id)
+
+        if (product.stock != 0):
+            product.stock -= 1
+
+        print(product)
+
+        product.save()
+
+        return HttpResponseRedirect("/compra-finalizada")
+    except:
+        return HttpResponseRedirect("/compra-finalizada")

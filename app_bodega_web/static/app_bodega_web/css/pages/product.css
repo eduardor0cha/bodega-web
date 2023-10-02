@@ -3,6 +3,12 @@
   flex-direction: column;
 }
 
+.p-product__heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 16px;
+}
+
 .p-product__img {
   height: auto;
   width: 100%;
@@ -47,19 +53,19 @@
   align-items: flex-start;
 }
 
-.p-product__freight-info > div {
+.p-product__freight-info>div {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 
 
-.p-product__freight-info > div > span {
+.p-product__freight-info>div>span {
   font-size: 0.75rem;
   font-weight: bold;
 }
 
-.p-product__freight-info > div > p {
+.p-product__freight-info>div>p {
   font-size: 0.75rem;
 }
 

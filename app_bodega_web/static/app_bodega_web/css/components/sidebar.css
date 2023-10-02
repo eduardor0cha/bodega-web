@@ -1,10 +1,10 @@
 .c-sidebar {
-	background-color: #23336e;
-	width: 250px;
-	height: 100vh;
-	padding: 0;
-	position: fixed;
-	transition: transform 100ms ease-in;
+  background-color: #23336e;
+  width: 250px;
+  height: 100vh;
+  padding: 0;
+  position: fixed;
+  transition: transform 100ms ease-in;
   z-index: 24;
   top: 0;
 }
@@ -27,7 +27,7 @@
   height: 2rem;
   display: flex;
   align-items: center;
-  color: #ffffff; 
+  color: #ffffff;
   text-decoration: none;
 }
 

@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
-	document.getElementById("c-header__open-sidebar-button").addEventListener("click", () => {
+  document.getElementById("c-header__open-sidebar-button").addEventListener("click", () => {
     const sidebar = document.getElementById("c-sidebar");
     sidebar.classList.toggle("c-sidebar--isHidden");
   });
