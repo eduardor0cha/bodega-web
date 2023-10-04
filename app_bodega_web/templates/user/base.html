@@ -9,6 +9,11 @@
     <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
 
     <link rel="stylesheet" href="{% static 'app_bodega_web/css/styles.css' %}"/>
+
+    <script>
+      var csrftoken = '{{ csrf_token }}';
+    </script>
+
     <title>Bodega Web</title>
   </head>
   <body>
@@ -26,7 +31,7 @@
     <nav class="c-navbar">
       <i class="fa-solid fa-bars fa-xl" id="c-header__open-sidebar-button"></i>
       <h1 onclick="location.href = '/'">Bodega</h1>
-      <i class="fa-solid fa-cart-shopping fa-xl"></i>
+      <i class="fa-solid fa-cart-shopping fa-xl" onclick="location.href = `{% url 'cart-page' %}`"></i>
     </nav>
     <main>
       {% block main %}{% endblock %}

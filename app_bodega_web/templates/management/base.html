@@ -1,0 +1,23 @@
+<html>
+  <head>
+    {% load static %}  
+    {% load custom_tags %}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="{% static 'app_bodega_web/css/styles.css' %}"/>
+    <title>Gerenciamento</title>
+  </head>
+  <body>
+    <nav class="c-navbar">
+      <h1 onclick="location.href = '/gerenciamento'">Gerenciamento</h1>
+    </nav>
+    <main>
+      {% block main %}{% endblock %}
+    </main>
+  </body>
+  <script src="../../static/app_bodega_web/js/script.js"></script>
+</html>

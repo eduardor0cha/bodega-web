@@ -4,6 +4,11 @@
 @import "./pages/home.css";
 @import "./pages/product.css";
 @import "./pages/buy-product.css";
+@import "./pages/home-management.css";
+@import "./components/product-card-management.css";
+@import "./pages/edit-product.css";
+@import "./pages/add-product.css";
+@import "./pages/cart-page.css";
 
 /* Componentes */
 @import "./components/product-card.css";
@@ -12,6 +17,7 @@
 @import "./components/button.css";
 @import "./components/sidebar.css";
 @import "./components/input.css";
+@import "./components/cart-card.css";
 
 body {
   background-color: #E2EAF8;
@@ -29,3 +35,11 @@ main {
 .bizarre-comment.transparent {
   opacity: 0.2;
 }
+
+/*$breakpoints: (
+  sm: 600px,
+  md: 960px,
+  lg: 1280px,
+  xl: 1400px,
+  xxl: 1920px,
+);*/

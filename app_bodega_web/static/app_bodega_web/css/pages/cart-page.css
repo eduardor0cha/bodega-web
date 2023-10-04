@@ -1,0 +1,24 @@
+.p-cart {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.p-cart__heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.p-cart__products {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media only screen and (min-width: 600px) {
+  .p-cart {
+    width: 600px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,61 @@
+{% extends "management/base.html" %}
+
+{% block main %}
+  {% load custom_tags %}
+  {% load humanize %}
+  <div class="p-edit-product">
+    {% if product == None %}
+      <span>Produto não encontrado</span>
+    {% else %}
+      <h2 class="p-edit-product__heading">Editar produto</h2>
+      <form class="p-edit-product__form" id="p-edit-product__form" method="post" action="{% url 'edit-product' product.id %}">
+        {% csrf_token %}
+        <div class="c-input">
+          <label>
+            Url da imagem <span>*</span>
+          </label>
+          {{form.imageUrl}}
+        </div>
+        <div class="c-input">
+          <label>
+            Nome <span>*</span>
+          </label>
+          {{form.name}}
+        </div>
+        <div class="c-input">
+          <label>
+            Valor <span>*</span>
+          </label>
+          {{form.value}}
+        </div>
+        <div class="c-input">
+          <label>
+            Desconto <span>*</span>
+          </label>
+          {{form.discount}}
+        </div>
+        <div class="c-input">
+          <label>
+            Estoque <span>*</span>
+          </label>
+          {{form.stock}}
+        </div>
+        <div class="c-input">
+          <label>
+            Categoria <span>*</span>
+          </label>
+          {{form.category}}
+        </div>
+        <div class="c-input">
+          <label>
+            Descrição <span>*</span>
+          </label>
+          {{form.description}}
+        </div>
+      </form>
+      <div class="p-edit-product__footer">
+        <button class="c-button" type="submit" form="p-edit-product__form">SALVAR</button>
+      </div>
+    {% endif %}
+  </div>
+{% endblock %}

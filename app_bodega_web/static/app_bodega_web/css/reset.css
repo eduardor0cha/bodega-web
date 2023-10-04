@@ -109,6 +109,7 @@ input {
   border-radius: 0;
 }
 
-html {
+html,
+textarea {
   font-family: 'Inter', sans-serif;
 }

@@ -40,3 +40,8 @@
   text-align: center;
   color: #787878;
 }
+
+.c-search-bar button:hover {
+  cursor: pointer;
+  background-color: #d6d6d667;
+}

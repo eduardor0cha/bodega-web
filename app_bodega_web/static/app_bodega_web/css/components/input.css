@@ -17,3 +17,25 @@
 .c-input input:focus {
   outline: none;
 }
+
+.c-input select {
+  border: 1px solid #D6D6D6;
+  height: 40px;
+  padding: 0 8px;
+}
+
+.c-input select:focus {
+  outline: none;
+}
+
+.c-input textarea {
+  border: 1px solid #D6D6D6;
+  padding: 8px;
+  min-height: 200px;
+  height: 100%;
+  resize: none;
+}
+
+.c-input textarea:focus {
+  outline: none;
+}

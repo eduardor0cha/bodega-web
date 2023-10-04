@@ -33,7 +33,7 @@
       <div class="p-buy-product__footer">
         <div class="p-buy-product__total">
           <span>Total</span>
-          <span>{{product.value | calcDiscount:product.discount | intcomma}}</span>
+          <span>R$ {{product.value | calcDiscount:product.discount | stringformat:'.2f' | intcomma}}</span>
         </div>
         <button class="c-button" form="p-buy-product__form" onclick="location.href = `{% url 'finalize-the-purchase' product.id %}`">FINALIZAR COMPRA</button>
       </div>

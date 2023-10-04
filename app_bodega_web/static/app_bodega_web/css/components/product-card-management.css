@@ -1,0 +1,64 @@
+.c-prod-card-mgmt {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  width: 100%;
+  border-radius: 4px;
+  color: #000000;
+  overflow: hidden;
+}
+
+.c-prod-card-mgmt__img {
+  width: 30%;
+  height: min-content;
+}
+
+.c-prod-card-mgmt__main-info {
+  display: flex;
+}
+
+.c-prod-card-mgmt__info {
+  padding: 4px;
+  width: 70%;
+}
+
+.c-prod-card-mgmt__info div {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.c-prod-card-mgmt__info span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.c-prod-card-mgmt__footer {
+  display: flex;
+  padding: 4px;
+  gap: 8px;
+}
+
+.c-prod-card-mgmt__footer button {
+  height: 40px;
+  width: 40px;
+  border: 1px solid #D6D6D6;
+  border-radius: 4px;
+  background: none;
+}
+
+.c-prod-card-mgmt__footer button:first-child {
+  color: #DE2727;
+}
+
+.c-prod-card-mgmt__footer button:last-child {
+  color: #868686;
+}
+
+.c-prod-card-mgmt__footer button:hover {
+  cursor: pointer;
+  background-color: #d6d6d667;
+}

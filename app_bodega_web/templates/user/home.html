@@ -32,7 +32,7 @@
               <div class="c-product-card__info">
                 <span class="c-product-card__name">{{product.name}}</span>
                 {% if product.discount == 0 %}
-                  <span class="c-product-card__value">R$ {{product.value}}</span>
+                  <span class="c-product-card__value">R$ {{product.value | stringformat:".2f" | intcomma}}</span>
                 {% else %}
                   <span class="c-product-card__old-value">R$ {{product.value | stringformat:".2f" | intcomma}}</span>
                   <span class="c-product-card__value">R$ {{product.value | calcDiscount:product.discount | stringformat:".2f" | intcomma}}</span>

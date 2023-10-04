@@ -16,8 +16,14 @@
 }
 
 .p-home__products {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   gap: 8px;
-  flex-shrink: 1;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+@media only screen and (min-width: 600px) {
+  .p-home {
+    width: 600px;
+    margin: 0 auto;
+  }
 }

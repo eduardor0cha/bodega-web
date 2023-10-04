@@ -13,3 +13,13 @@
   background: none;
   color: #335BE7;
 }
+
+.c-button:hover {
+  cursor: pointer;
+  background-color: #4569ed;
+}
+
+.c-button.outline:hover {
+  cursor: pointer;
+  background-color: #d6d6d667;
+}
