@@ -2,7 +2,6 @@
 
 {% block main %}
 {% load custom_tags %}
-{% load humanize %}
 <div class="p-home-management">
   <form action="">
     <div class="c-search-bar">
@@ -12,7 +11,7 @@
     </div>
   </form>
   {% if searchFor != "" %}
-  <h2 class="p-home-management__heading">Resultados para {{searchFor}}</h2>
+  <h2 class="p-home-management__heading">Resultados para "{{searchFor}}"</h2>
   {% endif %}
   <div class="p-home-management__products">
     {% if products.count == 0 %}
@@ -26,12 +25,12 @@
         <div class="c-prod-card-mgmt__info">
           <div>
             <span class="c-prod-card-mgmt__name">Nome: {{product.name}}</span>
-            <span class="c-prod-card-mgmt__value">Value: R$ {{product.value | stringformat:".2f" | intcomma}}</span>
+            <span class="c-prod-card-mgmt__value">Value: R$ {{product.value | formatToCurrency}}</span>
             <span class="c-prod-card-mgmt__discount">Desconto:
-              {{product.discount | multiply:100 | stringformat:".1f"}}%</span>
+              {{product.discount | formatPercentage}}%</span>
             <span class="c-prod-card-mgmt__discount">Descrição: {{product.description}}</span>
             <span class="c-prod-card-mgmt__discount">Categoria: {{product.category}}</span>
-            <span>Estoque {{product.stock}}</span>
+            <span>Estoque: {{product.stock}}</span>
           </div>
         </div>
       </div>
