@@ -1,0 +1,17 @@
+.p-login {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.p-login__heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.p-login form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

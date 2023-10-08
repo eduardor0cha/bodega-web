@@ -1,20 +1,19 @@
 {% extends "user/base.html" %}
 
 {% block main %}
-  {% load custom_tags %}
-  {% load humanize %}
-  <div class="p-cart">
-    <form id="p-cart__form" method="get" action="{% url 'finalize-the-purchase' %}">
-      <div class="p-cart__products" id="p-cart__products">
-        <h2 class="p-cart__heading">Carrinho</h2>
+{% load custom_tags %}
+<div class="p-cart">
+  <form id="p-cart__form" method="get" action="{% url 'finalize-the-purchase' %}">
+    <div class="p-cart__products" id="p-cart__products">
+      <h2 class="p-cart__heading">Carrinho</h2>
+    </div>
+    <div class="p-cart__footer">
+      <div class="p-cart__total">
+        <span>Total</span>
+        <span></span>
       </div>
-      <div class="p-cart__footer">
-        <div class="p-cart__total">
-          <span>Total</span>
-          <span></span>
-        </div>
-        <button class="c-button" form="p-cart__form" type="submit">FINALIZAR COMPRA</button>
-      </div>
-    </form>
-  </div>
-{% endblock %}  
+      <button class="c-button" form="p-cart__form" type="submit">FINALIZAR COMPRA</button>
+    </div>
+  </form>
+</div>
+{% endblock %}

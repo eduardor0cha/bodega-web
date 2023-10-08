@@ -1,0 +1,59 @@
+{% extends "user/base.html" %}
+
+{% block main %}
+<div class="p-signin">
+  <span class="p-signin__heading">Cadastro</span>
+  <a href="/login">Já possui uma conta? Faça login</a>
+  <form class="p-signin__form" id="p-signin__form" method="POST" action="{% url 'signin-page' %}">
+    {% csrf_token %}
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <div class="c-input">
+      <label>Nome de usuário <span>*</span></label>
+      {{form.username}}
+    </div>
+    <div class="c-input">
+      <label>E-mail <span>*</span></label>
+      {{form.email}}
+    </div>
+    <div class="c-input">
+      <label>Senha <span>*</span></label>
+      {{form.password1}}
+    </div>
+    <div class="c-input">
+      <label>Confirmar senha <span>*</span></label>
+      {{form.password2}}
+    </div>
+    
+    <span class="p-signin__heading">Endereço</span>
+    <span class="bizarre-comment transparent">A gente já sabe o seu endereço, é só formalidades mesmo</span>
+    <div class="c-input">
+      <label>Estado <span>*</span></label>
+      {{form.state}}
+    </div>
+    <div class="c-input">
+      <label>Cidade <span>*</span></label>
+      {{form.city}}
+    </div>
+    <div class="c-input">
+      <label>Bairro <span>*</span></label>
+      {{form.district}}
+    </div>
+    <div class="c-input">
+      <label>Rua <span>*</span></label>
+      {{form.street}}
+    </div>
+    <div class="c-input">
+      <label>Número</label>
+      {{form.number}}
+    </div>
+
+    <button class="c-button" type="submit">CADASTRAR</button>
+  </form>
+</div>
+{% endblock %}

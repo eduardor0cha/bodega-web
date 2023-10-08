@@ -9,7 +9,7 @@
   top: 0;
 }
 
-.c-sidebar--isHidden {
+.c-sidebar.hidden {
   transform: translateX(-250px);
   transition: transform 0ms ease-out;
 }

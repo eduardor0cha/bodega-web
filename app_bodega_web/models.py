@@ -1,4 +1,21 @@
 from django.db import models
+from django.contrib.auth import get_user_model
+
+
+def generateUniqueSlug(productName):
+    slug = "-".join(str(productName).split())
+    slug = slug.lower()
+
+    index = 1
+    slugBase = slug
+    while True:
+        try:
+            Product.objects.get(slug=slug)
+        except:
+            return slug
+
+        index += 1
+        slug = slugBase + f"--{index}"
 
 # Create your models here.
 
@@ -6,6 +23,7 @@ from django.db import models
 class Product(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=255)
+    slug = models.SlugField(max_length=255, unique=True)
     description = models.TextField()
     value = models.FloatField()
     discount = models.FloatField()
@@ -33,3 +51,50 @@ class Product(models.Model):
     )
     createdAt = models.DateTimeField(auto_now_add=True)
     updatedAt = models.DateTimeField(auto_now=True)
+
+    def save(self, *args, **kwargs):
+        self.slug = generateUniqueSlug(self.name)
+        return super().save(*args, **kwargs)
+
+
+class Address(models.Model):
+    user = models.OneToOneField(
+        get_user_model(), on_delete=models.CASCADE, primary_key=True)
+    STATES_CHOICES = [
+        ('AC', 'Acre'),
+        ('AL', 'Alagoas'),
+        ('AP', 'Amapá'),
+        ('AM', 'Amazonas'),
+        ('BA', 'Bahia'),
+        ('CE', 'Ceará'),
+        ('ES', 'Espírito Santo'),
+        ('GO', 'Goiás'),
+        ('MA', 'Maranhão'),
+        ('MT', 'Mato Grosso'),
+        ('MS', 'Mato Grosso do Sul'),
+        ('MG', 'Minas Gerais'),
+        ('PA', 'Pará'),
+        ('PB', 'Paraíba'),
+        ('PR', 'Paraná'),
+        ('PE', 'Pernambuco'),
+        ('PI', 'Piauí'),
+        ('RJ', 'Rio de Janeiro'),
+        ('RN', 'Rio Grande do Norte'),
+        ('RS', 'Rio Grande do Sul'),
+        ('RO', 'Rondônia'),
+        ('RR', 'Roraima'),
+        ('SC', 'Santa Catarina'),
+        ('SP', 'São Paulo'),
+        ('SE', 'Sergipe'),
+        ('TO', 'Tocantins'),
+        ('DF', 'Distrito Federal'),
+    ]
+    state = models.CharField(
+        max_length=2,
+        choices=STATES_CHOICES,
+        null=False
+    )
+    city = models.CharField(max_length=255)
+    district = models.CharField(max_length=255)
+    street = models.CharField(max_length=255)
+    number = models.CharField(max_length=255, blank=True)

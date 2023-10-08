@@ -1,51 +1,52 @@
 {% extends "user/base.html" %}
 
 {% block main %}
-  {% load custom_tags %}
-  {% load humanize %}
-  <div class="p-home">
-    <form action="">
-      <div class="c-search-bar">
-        <input placeholder="Buscar na Bodega" name="buscar-por" value="{{searchFor}}"/>
-        <button type="submit"><i class="fa-solid fa-magnifying-glass fa-xl">
+{% load custom_tags %}
+<div class="p-home">
+  <form action="">
+    <div class="c-search-bar">
+      <input placeholder="Buscar na Bodega" name="buscar-por" value="{{searchFor}}" />
+      <button type="submit"><i class="fa-solid fa-magnifying-glass fa-xl">
         </i></button>
-      </div>
-      <input name="categoria" value="{{selectedCategory}}" style="display: none;" readonly/>
-    </form>
-    {% if isCategoryValid == True %}
-      {% if selectedCategory != "" %}
-        <h2 class="p-home__category">{{selectedCategoryLabel}}</h2>
-      {% endif %}
-      {% if searchFor == "" %}
-        <h2 class="p-home__heading">Melhores ofertas</h2>
-      {% else %}
-        <h2 class="p-home__heading">Resultados para {{searchFor}}</h2>
-      {% endif %}
-      <div class="p-home__products">
-        {% if products.count == 0 %}
-          <span>Nenhum produto encontrado :(</span>
+    </div>
+    <input name="categoria" value="{{selectedCategory}}" style="display: none;" readonly />
+  </form>
+  {% if isCategoryValid == True %}
+  {% if selectedCategory != "" %}
+  <h2 class="p-home__category">{{selectedCategoryLabel}}</h2>
+  {% endif %}
+  {% if searchFor == "" %}
+  <h2 class="p-home__heading">Melhores ofertas</h2>
+  {% else %}
+  <h2 class="p-home__heading">Resultados para {{searchFor}}</h2>
+  {% endif %}
+  <div class="p-home__products">
+    {% if products.count == 0 %}
+    <span>Nenhum produto encontrado :(</span>
+    {% else %}
+    {% for product in products %}
+    {%if product.stock != 0 %}
+    <a class="c-product-card" href="{% url 'product-page' product.slug %}">
+      <img src={{product.imageUrl}} class="c-product-card__img" />
+      <div class="c-product-card__info">
+        <span class="c-product-card__name">{{product.name}}</span>
+        {% if product.discount == 0 %}
+        <span class="c-product-card__value">R$ {{product.value | formatToCurrency}}</span>
         {% else %}
-          {% for product in products %}
-            {%if product.stock != 0 %}
-              <a class="c-product-card" href="{% url 'product-page' product.id %}">
-              <img src={{product.imageUrl}} class="c-product-card__img"/>
-              <div class="c-product-card__info">
-                <span class="c-product-card__name">{{product.name}}</span>
-                {% if product.discount == 0 %}
-                  <span class="c-product-card__value">R$ {{product.value | stringformat:".2f" | intcomma}}</span>
-                {% else %}
-                  <span class="c-product-card__old-value">R$ {{product.value | stringformat:".2f" | intcomma}}</span>
-                  <span class="c-product-card__value">R$ {{product.value | calcDiscount:product.discount | stringformat:".2f" | intcomma}}</span>
-                  <span class="c-product-card__discount">({{product.discount | multiply:100 | stringformat:".1f"}}% de desconto)</span>
-                {% endif %}
-                </div>
-              </a>
-            {% endif %}
-          {% endfor %}
+        <span class="c-product-card__old-value">R$ {{product.value | formatToCurrency}}</span>
+        <span class="c-product-card__value">R$
+          {{product.value | calcDiscount:product.discount | formatToCurrency}}</span>
+        <span class="c-product-card__discount">({{product.discount | formatPercentage}}% de
+          desconto)</span>
         {% endif %}
       </div>
-    {% else %}
-      <h2 class="p-home__heading">A categoria "{{selectedCategory}}" é inválida</h2>
+    </a>
+    {% endif %}
+    {% endfor %}
     {% endif %}
   </div>
-{% endblock %}  
+  {% else %}
+  <h2 class="p-home__heading">A categoria "{{selectedCategory}}" é inválida</h2>
+  {% endif %}
+</div>
+{% endblock %}

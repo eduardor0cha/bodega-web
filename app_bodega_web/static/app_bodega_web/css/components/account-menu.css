@@ -1,0 +1,48 @@
+.c-account-menu {
+  position: relative;
+  margin-left: 8px;
+}
+
+.c-account-menu__profile-pic {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.c-account-menu__profile-pic:hover {
+  cursor: pointer;
+}
+
+.c-account-menu__card {
+  position: absolute;
+  width: max-content;
+  right: 0;
+  background-color: #23336e;
+  padding: 0.5rem 0;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+.c-account-menu__item {
+  background-color: transparent;
+  border: none;
+  padding: 0.5rem 1rem;
+  text-align: start;
+  color: #FFFFFF;
+  font-size: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  width: 100%;
+}
+
+.c-account-menu__button:hover {
+  cursor: pointer;
+  background-color: #ffffff3c;
+}
+
+.c-account-menu__card.hidden {
+  display: none;
+}

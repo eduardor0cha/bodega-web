@@ -1,23 +1,39 @@
 <html>
-  <head>
-    {% load static %}  
-    {% load custom_tags %}
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
-    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
-    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
 
-    <link rel="stylesheet" href="{% static 'app_bodega_web/css/styles.css' %}"/>
-    <title>Gerenciamento</title>
-  </head>
-  <body>
-    <nav class="c-navbar">
-      <h1 onclick="location.href = '/gerenciamento'">Gerenciamento</h1>
-    </nav>
-    <main>
-      {% block main %}{% endblock %}
-    </main>
-  </body>
-  <script src="../../static/app_bodega_web/js/script.js"></script>
+<head>
+  {% load static %}
+  {% load custom_tags %}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="{% static 'app_bodega_web/css/styles.css' %}" />
+  <title>Gerenciamento</title>
+</head>
+
+<body>
+  <nav class="c-navbar">
+    <i class="fa-solid fa-bars fa-xl" id="c-header__open-sidebar-button"></i>
+    <h1 onclick="location.href = '/gerenciamento'">Gerenciamento</h1>
+    <div class="c-account-menu">
+      <img src="{% static 'app_bodega_web/images/generic-profilepic.jpg' %}" alt="Foto de perfil"
+        class="c-account-menu__profile-pic" id="c-account-menu__profile-pic" />
+      <div class="c-account-menu__card hidden" id="c-account-menu__card">
+        <span class="c-account-menu__item">{{loggedUser.username}}</span>
+        <form method="POST" action="{% url 'home' %}">
+          {% csrf_token %}
+          <button class=" c-account-menu__item c-account-menu__button" type="submit">
+            Sair
+          </button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <main>
+    {% block main %}{% endblock %}
+  </main>
+</body>
+<script src="../../static/app_bodega_web/js/script.js"></script>
 </html>

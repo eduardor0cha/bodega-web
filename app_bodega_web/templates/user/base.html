@@ -1,41 +1,61 @@
 <html>
-  <head>
-    {% load static %}  
-    {% load custom_tags %}
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
-    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
-    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
 
-    <link rel="stylesheet" href="{% static 'app_bodega_web/css/styles.css' %}"/>
+<head>
+  {% load static %}
+  {% load custom_tags %}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
 
-    <script>
-      var csrftoken = '{{ csrf_token }}';
-    </script>
+  <link rel="stylesheet" href="{% static 'app_bodega_web/css/styles.css' %}" />
 
-    <title>Bodega Web</title>
-  </head>
-  <body>
-    <div class="c-sidebar c-sidebar--isHidden" id="c-sidebar">
-      <div class="c-sidebar__header">
-        <i class="fa-solid fa-xmark fa-xl" id="c-sidebar__close-sidebar-button"></i>
-      </div>
-      <ul class="c-sidebar-menu">
-        <a href="/" class="c-sidebar-menu__item {% if selectedCategory == '' %}c-sidebar-menu__item--selected{% endif %}"><li>Todos</li></a>
-        {% for category in productCategories %}
-          <a class="c-sidebar-menu__item  {% if selectedCategory == category|index:0 %}c-sidebar-menu__item--selected{% endif %}" href="/?categoria={{category|index:0}}"><li>{{category|index:1}}</li></a>
-        {% endfor %}
-      </ul>
+  <title>Bodega Web</title>
+</head>
+
+<body>
+  <div class="c-sidebar hidden" id="c-sidebar">
+    <div class="c-sidebar__header">
+      <i class="fa-solid fa-xmark fa-xl" id="c-sidebar__close-sidebar-button"></i>
     </div>
-    <nav class="c-navbar">
-      <i class="fa-solid fa-bars fa-xl" id="c-header__open-sidebar-button"></i>
-      <h1 onclick="location.href = '/'">Bodega</h1>
-      <i class="fa-solid fa-cart-shopping fa-xl" onclick="location.href = `{% url 'cart-page' %}`"></i>
-    </nav>
-    <main>
-      {% block main %}{% endblock %}
-    </main>
-  </body>
-  <script src="../../static/app_bodega_web/js/script.js"></script>
+    <ul class="c-sidebar-menu">
+      <a href="/" class="c-sidebar-menu__item {% if selectedCategory == '' %}c-sidebar-menu__item--selected{% endif %}">
+        <li>Todos</li>
+      </a>
+      {% for category in productCategories %}
+      <a class="c-sidebar-menu__item  {% if selectedCategory == category|index:0 %}c-sidebar-menu__item--selected{% endif %}"
+        href="/?categoria={{category|index:0}}">
+        <li>{{category|index:1}}</li>
+      </a>
+      {% endfor %}
+    </ul>
+  </div>
+  <nav class="c-navbar">
+    <i class="fa-solid fa-bars fa-xl" id="c-header__open-sidebar-button"></i>
+    <h1 onclick="location.href = '/'">Bodega</h1>
+    {% if loggedUser != None %}
+    <i class="fa-solid fa-cart-shopping fa-xl" onclick="location.href = `{% url 'cart-page' %}`"></i>
+    <div class="c-account-menu">
+      <img src="{% static 'app_bodega_web/images/generic-profilepic.jpg' %}" alt="Foto de perfil"
+        class="c-account-menu__profile-pic" id="c-account-menu__profile-pic" />
+      <div class="c-account-menu__card hidden" id="c-account-menu__card">
+        <span class="c-account-menu__item">{{loggedUser.username}}</span>
+        <form method="POST" action="{% url 'home' %}">
+          {% csrf_token %}
+          <button class=" c-account-menu__item c-account-menu__button" type="submit">
+            Sair
+          </button>
+        </form>
+      </div>
+    </div>
+    {% else %}
+    <button class="c-button outline light" onclick="location.href = `{% url 'login-page' %}`">ENTRAR</button>
+    {% endif %}
+  </nav>
+  <main>
+    {% block main %}{% endblock %}
+  </main>
+</body>
+<script src="../../static/app_bodega_web/js/script.js"></script>
 </html>

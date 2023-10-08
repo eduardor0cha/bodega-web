@@ -1,0 +1,27 @@
+{% extends "user/base.html" %}
+
+{% block main %}
+<div class="p-login">
+  <span class="p-login__heading">Login</span>
+  <a href="/cadastrar">Não possui conta? Cadastre-se</a>
+  <form class="p-login__form" id="p-login__form" method="POST" action="{% url 'login-page' %}">
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% csrf_token %}
+    <div class="c-input">
+      <label>Nome de usuário <span>*</span></label>
+      {{form.username}}
+    </div>
+    <div class="c-input">
+      <label>Senha <span>*</span></label>
+      {{form.password}}
+    </div>
+    <button class="c-button" type="submit">ENTRAR</button>
+  </form>
+</div>
+{% endblock %}

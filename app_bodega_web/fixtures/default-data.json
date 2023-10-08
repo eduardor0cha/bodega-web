@@ -4,6 +4,7 @@
     "pk": 1,
     "fields": {
       "name": "Nutella 650G Ferrero Creme De Avelã",
+      "slug": "nutella-650g-ferrero-creme-de-avelã",
       "description": "A famosa Nutella 650g Ferrero, queridinha por todos é ideal para uma infinidade de produções. é super cremosa, e deliciosa; podendo ser utilizada como recheio de bolos; ovos de Páscoa; tortas; trufas; pães; para decoração e cobertura das famosas taças de sorvete; recheios de docinhos; acompanhando frutas; em torradas para dar aquela incrementada em seu café da manhã e o que mais você quiser criar. E pra você que nunca teve a experiência de provar desse produto, irá se impressionar com tanta cremosidade e sabor. Nutella deixa tudo mais gostoso, pois os ingredientes usados são cuidadosamente selecionados e de altíssima qualidade.\n\nIngredientes:\n- Açúcar, óleo vegetal (palma), avelãs (13%), leite desnatado em pó (8,7%), cacau em pó parcialmente desengordurado (7,4%), emulsificante lecitinas, aromatizante. Componentes do leite: 8,7%. Alérgicos: Contém avelãs e derivados de leite e soja. Contém lactose. Não contém glúten.\n\nQuantidade:\n- Contém 650g\n\nInformação Nutricional de uma Porção de 20g:\n- Valor Energético: 107kcal = 446kj. Carboidratos: 12g. Proteínas: 1,3g. Gorduras Totais: 6,2g. Gorduras Saturadas: 2,1g. Gorduras Trans: 0g. Fibra Alimentar: 0,6g. Sódio: 8,4mg.\n\nSobre a Marca:\n- nutella traz mais sabor aos pães e frutas do café da manhã, e é capaz de abrir o mais delicioso sorriso no rosto de toda a família e deixar qualquer manhã muito mais gostosa. Criada em 1940 na Itália por Pietro Ferrero, nutella é o mais conhecido e vendido creme de avelãs do mundo e atualmente está disponível em mais de 75 países e desde 2005 no Brasil.",
       "value": 45.35,
       "discount": 0.12,
@@ -19,6 +20,7 @@
     "pk": 2,
     "fields": {
       "name": "Pilha Alcalina AAA Palito DURACELL com 4 unidades",
+      "slug": "pilha-alcalina-aaa-palito-duracell-com-4-unidades",
       "description": "Quando se trata de pilhas confiáveis e de longa duração, Duracell é a melhor opção. Projetadas para fornecer aquela energia extra as pilhas AA (Pilha Pequena) proporcionam energia confiável aos aparelhos do dia a dia, como brinquedos, controles remotos, consoles de jogos portáteis, fechaduras eletrônicas, lanternas, etc. Além disso, a tecnologia de Duracell preserva a energia das pilhas que ainda não foram usadas, por até 10 anos. As Pilhas Alcalinas Duracell duram até 10 vezes mais* vs. pilhas comuns de zinco-carbono. * Os resultados podem variar por dispositivo.",
       "value": 14.52,
       "discount": 0,

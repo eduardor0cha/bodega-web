@@ -1,50 +1,53 @@
 {% extends "management/base.html" %}
 
 {% block main %}
-  {% load custom_tags %}
-  {% load humanize %}
-  <div class="p-home-management">
-    <form action="">
-      <div class="c-search-bar">
-        <input placeholder="Buscar produto" name="buscar-por" value="{{searchFor}}"/>
-        <button type="submit"><i class="fa-solid fa-magnifying-glass fa-xl">
+{% load custom_tags %}
+{% load humanize %}
+<div class="p-home-management">
+  <form action="">
+    <div class="c-search-bar">
+      <input placeholder="Buscar produto" name="buscar-por" value="{{searchFor}}" />
+      <button type="submit"><i class="fa-solid fa-magnifying-glass fa-xl">
         </i></button>
+    </div>
+  </form>
+  {% if searchFor != "" %}
+  <h2 class="p-home-management__heading">Resultados para {{searchFor}}</h2>
+  {% endif %}
+  <div class="p-home-management__products">
+    {% if products.count == 0 %}
+    <span>Nenhum produto encontrado :(</span>
+    {% else %}
+    {% for product in products %}
+    {%if product.stock != 0 %}
+    <div class="c-prod-card-mgmt">
+      <div class="c-prod-card-mgmt__main-info">
+        <img src={{product.imageUrl}} class="c-prod-card-mgmt__img" />
+        <div class="c-prod-card-mgmt__info">
+          <div>
+            <span class="c-prod-card-mgmt__name">Nome: {{product.name}}</span>
+            <span class="c-prod-card-mgmt__value">Value: R$ {{product.value | stringformat:".2f" | intcomma}}</span>
+            <span class="c-prod-card-mgmt__discount">Desconto:
+              {{product.discount | multiply:100 | stringformat:".1f"}}%</span>
+            <span class="c-prod-card-mgmt__discount">Descrição: {{product.description}}</span>
+            <span class="c-prod-card-mgmt__discount">Categoria: {{product.category}}</span>
+            <span>Estoque {{product.stock}}</span>
+          </div>
+        </div>
       </div>
-    </form>
-    {% if searchFor != "" %}
-      <h2 class="p-home-management__heading">Resultados para {{searchFor}}</h2>
+      <div class="c-prod-card-mgmt__footer">
+        <button onclick="location.href = `{% url 'delete-product' product.id %}`"><i
+            class="fa-solid fa-trash fa-xl"></i></button>
+        <button onclick="location.href = `{% url 'edit-product' product.id %}`"><i
+            class="fa-solid fa-pen fa-xl"></i></button>
+      </div>
+    </div>
     {% endif %}
-    <div class="p-home-management__products">
-      {% if products.count == 0 %}
-        <span>Nenhum produto encontrado :(</span>
-      {% else %}
-        {% for product in products %}
-          {%if product.stock != 0 %}
-            <div class="c-prod-card-mgmt">
-              <div class="c-prod-card-mgmt__main-info">
-                <img src={{product.imageUrl}} class="c-prod-card-mgmt__img"/>
-                <div class="c-prod-card-mgmt__info">
-                  <div>
-                    <span class="c-prod-card-mgmt__name">Nome: {{product.name}}</span>
-                    <span class="c-prod-card-mgmt__value">Value: R$ {{product.value | stringformat:".2f" | intcomma}}</span>
-                    <span class="c-prod-card-mgmt__discount">Desconto: {{product.discount | multiply:100 | stringformat:".1f"}}%</span>
-                    <span class="c-prod-card-mgmt__discount">Descrição: {{product.description}}</span>
-                    <span class="c-prod-card-mgmt__discount">Categoria: {{product.category}}</span>
-                    <span>Estoque {{product.stock}}</span>
-                  </div>
-                </div>
-              </div>
-              <div class="c-prod-card-mgmt__footer">
-                <button onclick="location.href = `{% url 'delete-product' product.id %}`"><i class="fa-solid fa-trash fa-xl"></i></button>
-                <button onclick="location.href = `{% url 'edit-product' product.id %}`"><i class="fa-solid fa-pen fa-xl"></i></button>
-              </div>
-            </div>
-          {% endif %}
-        {% endfor %}
-      {% endif %}
-    </div>
-    <div class="p-home-management__footer">
-      <button class="c-button" onclick="location.href = `{% url 'create-product' %}`">ADICIONAR PRODUTO</button>
-    </div>
+    {% endfor %}
+    {% endif %}
   </div>
-{% endblock %}  
+  <div class="p-home-management__footer">
+    <button class="c-button" onclick="location.href = `{% url 'create-product' %}`">ADICIONAR PRODUTO</button>
+  </div>
+</div>
+{% endblock %}

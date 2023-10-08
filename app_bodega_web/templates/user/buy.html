@@ -1,42 +1,42 @@
 {% extends "user/base.html" %}
 
 {% block main %}
-  {% load custom_tags %}
-  {% load humanize %}
-  <div class="p-buy-product">
-    {% if product == None %}
-      <span>Produto não encontrado</span>
-    {% else %}
-      <h2 class="p-buy-product__heading">Quase lá!</h2>
-      <form class="p-buy-product__form" id="p-buy-product__form" onsubmit="(e) => e.preventDefalt()">
-        <span class="p-buy-product__form-title">Informe o seu endereço</span>
-        <div class="c-input">
-          <label>
-            CEP <span>*</span>
-          </label>
-          <input required/>
-        </div>
-        <div class="c-input">
-          <label>
-            Rua <span>*</span>
-          </label>
-          <input required/>
-        </div>
-        <div class="c-input">
-          <label>
-            Número
-          </label>
-          <input/>
-        </div>
-      </form>
-      <span class="bizarre-comment transparent">A gente já sabe o seu endereço, é só formalidades mesmo</span>
-      <div class="p-buy-product__footer">
-        <div class="p-buy-product__total">
-          <span>Total</span>
-          <span>R$ {{product.value | calcDiscount:product.discount | stringformat:'.2f' | intcomma}}</span>
-        </div>
-        <button class="c-button" form="p-buy-product__form" onclick="location.href = `{% url 'finalize-the-purchase' product.id %}`">FINALIZAR COMPRA</button>
-      </div>
-    {% endif %}
+{% load custom_tags %}
+<div class="p-buy-product">
+  {% if product == None %}
+  <span>Produto não encontrado</span>
+  {% else %}
+  <h2 class="p-buy-product__heading">Quase lá!</h2>
+  <form class="p-buy-product__form" id="p-buy-product__form" onsubmit="(e) => e.preventDefalt()">
+    <span class="p-buy-product__form-title">Informe o seu endereço</span>
+    <div class="c-input">
+      <label>
+        CEP <span>*</span>
+      </label>
+      <input required />
+    </div>
+    <div class="c-input">
+      <label>
+        Rua <span>*</span>
+      </label>
+      <input required />
+    </div>
+    <div class="c-input">
+      <label>
+        Número
+      </label>
+      <input />
+    </div>
+  </form>
+  <span class="bizarre-comment transparent">A gente já sabe o seu endereço, é só formalidades mesmo</span>
+  <div class="p-buy-product__footer">
+    <div class="p-buy-product__total">
+      <span>Total</span>
+      <span>R$ {{product.value | calcDiscount:product.discount | formatToCurrency}}</span>
+    </div>
+    <button class="c-button" form="p-buy-product__form"
+      onclick="location.href = `{% url 'finalize-the-purchase' product.id %}`">FINALIZAR COMPRA</button>
   </div>
+  {% endif %}
+</div>
 {% endblock %}
