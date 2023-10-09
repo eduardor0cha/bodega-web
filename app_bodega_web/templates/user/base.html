@@ -35,7 +35,9 @@
     <i class="fa-solid fa-bars fa-xl" id="c-header__open-sidebar-button"></i>
     <h1 onclick="location.href = '/'">Bodega</h1>
     {% if loggedUser != None %}
-    <i class="fa-solid fa-cart-shopping fa-xl" onclick="location.href = `{% url 'cart-page' %}`"></i>
+      <div class="c-navbar__cart-button">
+        <i class="fa-solid fa-cart-shopping fa-xl" onclick="location.href = `{% url 'cart-page' %}`"></i>
+      </div>
     <div class="c-account-menu">
       <img src="{% static 'app_bodega_web/images/generic-profilepic.jpg' %}" alt="Foto de perfil"
         class="c-account-menu__profile-pic" id="c-account-menu__profile-pic" />
@@ -43,7 +45,7 @@
         <span class="c-account-menu__item">{{loggedUser.username}}</span>
         <form method="POST" action="{% url 'home' %}">
           {% csrf_token %}
-          <button class=" c-account-menu__item c-account-menu__button" type="submit">
+          <button class="c-account-menu__item c-account-menu__button" type="submit">
             Sair
           </button>
         </form>

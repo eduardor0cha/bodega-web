@@ -49,11 +49,11 @@
   .p-add-product {
     width: 600px;
     margin: 0 auto;
-    padding: 16px 0px;
+    padding-bottom: calc(96px + 16px);
   }
 
   .p-add-product__footer {
-    width: 600px;
+    width: calc(600px - 32px);
     left: auto;
     bottom: 16px;
     border: 1px solid #A3A3A3;

@@ -21,6 +21,20 @@
   cursor: pointer;
 }
 
+.c-navbar__cart-button {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.c-navbar__cart-button:hover {
+  cursor: pointer;
+  background-color: #d6d6d667;
+}
+
 #c-header__open-sidebar-button:hover {
   cursor: pointer;
 }

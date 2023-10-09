@@ -4,6 +4,7 @@
   flex-direction: column;
   gap: 16px;
   height: 60%;
+  padding-bottom: 96px;
 }
 
 .p-finalized-purchase__heading {
@@ -34,11 +35,11 @@
   .p-finalized-purchase {
     width: 600px;
     margin: 0 auto;
-    padding: 16px 0px;
+    padding-bottom: calc(96px + 16px);
   }
 
   .p-finalized-purchase__footer {
-    width: 600px;
+    width: calc(600px - 32px);
     left: auto;
     bottom: 16px;
     border: 1px solid #A3A3A3;
