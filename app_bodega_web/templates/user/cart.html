@@ -3,17 +3,50 @@
 {% block main %}
 {% load custom_tags %}
 <div class="p-cart">
-  <form id="p-cart__form" method="get" action="{% url 'finalize-the-purchase' %}">
     <div class="p-cart__products" id="p-cart__products">
       <h2 class="p-cart__heading">Carrinho</h2>
+      {% for item in items %}
+        <div class="c-cart-card">
+          <a href={% url 'product-page' item.product.slug%} target="_blank">
+          <div class="c-cart-card__main-info">
+            <img src="{{item.product.imageUrl}}" class="c-cart-card__img"/>
+            <div class="c-cart-card__info">
+              <div>
+                <span class="c-cart-card__name">{{item.product.name}}</span>
+                <span class="c-cart-card__value">R$ {{item.product.value | calcDiscount:item.product.discount | formatToCurrency}} x {{item.amount}}</span>
+              </div>
+            </div>
+          </div>
+        </a>
+          <div class="c-cart-card__footer">
+            <form method="POST" action="{% url 'cart-remove' %}">
+              {% csrf_token %}
+              <input readonly name="productId" value={{item.product.id}} type="hidden"/>
+              <button type="submit"><i class="fa-solid fa-trash fa-xl"></i></button>
+              <span>R$ {{item.product.value | calcDiscount:item.product.discount | multiply:item.amount | formatToCurrency}}</span>
+            </form>
+          </div>
+        </div>
+      {% empty %}
+        <span>Não há nenhum produto no carrinho.</span>
+      {% endfor %}
     </div>
-    <div class="p-cart__footer">
-      <div class="p-cart__total">
-        <span>Total</span>
-        <span></span>
+    {% if items %}
+      <div class="p-cart__footer">
+        <form method="POST" action="{% url 'buy-product' %}">
+          {% csrf_token %}
+          {% for form in formset.forms %}
+            {{form.amount.as_hidden}}
+            {{form.productId.as_hidden}}
+          {% endfor %}
+          {{ formset.management_form }}
+          <div class="p-buy-product__total">
+            <span>Total</span>
+            <span>R$ {{total | formatToCurrency}}</span>
+          </div>
+          <button class="c-button" type="submit" name="buy-product">COMPRAR</button>
+        </form>
       </div>
-      <button class="c-button" form="p-cart__form" type="submit">FINALIZAR COMPRA</button>
-    </div>
-  </form>
+    {% endif %}
 </div>
 {% endblock %}

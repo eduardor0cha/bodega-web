@@ -3,40 +3,43 @@
 {% block main %}
 {% load custom_tags %}
 <div class="p-buy-product">
-  {% if product == None %}
-  <span>Produto não encontrado</span>
-  {% else %}
   <h2 class="p-buy-product__heading">Quase lá!</h2>
-  <form class="p-buy-product__form" id="p-buy-product__form" onsubmit="(e) => e.preventDefalt()">
-    <span class="p-buy-product__form-title">Informe o seu endereço</span>
-    <div class="c-input">
-      <label>
-        CEP <span>*</span>
-      </label>
-      <input required />
+  <div class="p-buy-product__address">
+    <span>Seu endereço</span>
+    <div>
+      {% if address.number != None %}
+        <p>{{address.street}}, {{address.number}} - {{address.district}}</p>
+      {% else %}
+        <p>{{address.street}} - {{address.district}}</p>
+      {% endif %}
+      <p>{{address.city}} - {{address.state}}</p>
     </div>
-    <div class="c-input">
-      <label>
-        Rua <span>*</span>
-      </label>
-      <input required />
-    </div>
-    <div class="c-input">
-      <label>
-        Número
-      </label>
-      <input />
-    </div>
-  </form>
-  <span class="bizarre-comment transparent">A gente já sabe o seu endereço, é só formalidades mesmo</span>
-  <div class="p-buy-product__footer">
-    <div class="p-buy-product__total">
-      <span>Total</span>
-      <span>R$ {{product.value | calcDiscount:product.discount | formatToCurrency}}</span>
-    </div>
-    <button class="c-button" form="p-buy-product__form"
-      onclick="location.href = `{% url 'finalize-the-purchase' product.id %}`">FINALIZAR COMPRA</button>
   </div>
-  {% endif %}
+  {% for item in items %}
+    <a class="p-buy-product__item" href="{% url 'product-page' item.product.slug %}" target="_blank">
+      <img src={{item.product.imageUrl}} class="p-buy-product__item__img" />
+      <div class="p-buy-product__item__info">
+        <div>
+          <span class="p-buy-product__item__name">{{item.product.name}}</span>
+          <span class="p-buy-product__item__value">{{item.amount}} x R$ {{item.product.value | calcDiscount:item.product.discount | formatToCurrency}}</span>
+        </div>
+      </div>
+    </a>
+  {% endfor %}
+  <div class="p-buy-product__footer">
+    <form method="POST" action="{% url 'finalized-purchase' %}">
+      {% csrf_token %}
+      {% for form in formset.forms %}
+        {{form.amount.as_hidden}}
+        {{form.productId.as_hidden}}
+      {% endfor %}
+      {{ formset.management_form }}
+      <div class="p-buy-product__total">
+        <span>Total</span>
+        <span>R$ {{total | formatToCurrency}}</span>
+      </div>
+      <button class="c-button" type="submit">FINALIZAR COMPRA</button>
+    </form>
+  </div>
 </div>
 {% endblock %}

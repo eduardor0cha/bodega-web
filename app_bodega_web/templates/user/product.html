@@ -28,20 +28,26 @@
             heheheh)</span></p>
       </div>
     </div>
-    <form method="post" action="{% url 'buy-product' %}" id="p-product__form">
-      {% csrf_token %}
-      <div class="c-input">
-        <label>
-          Quantidade <span>*</span>
-        </label>
-        <input id="p-product__amount-input" type="number" name="{{product.id}}" value="1" min="1"
-          max="{{product.stock}}" required />
-      </div>
+    <form method="POST" action="{% url 'buy-product' %}" id="p-product__form">
+        {% csrf_token %}
+        {% for form in formset.forms %}
+          <div class="c-input">
+            <label>Quantidade <span>*</span></label>
+            {{form.amount}}
+          </div>
+          {{form.productId}}
+        {% endfor %}
+        {{ formset.management_form }}
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
     </form>
-    <button class="c-button" type="submit" form="p-product__form">COMPRAR</button>
-    <button class="c-button outline"
-      onclick="addToCart('{{product.id}}', document.getElementById('p-product__amount-input').value)">ADICIONAR AO
-      CARRINHO</button>
+    <button class="c-button" type="submit" name="buy-product" form="p-product__form">COMPRAR</button>
+    <button class="c-button outline" type="submit" name="add-product-to-cart" form="p-product__form">ADICIONAR AO CARRINHO</button>
     <span class="p-product__description">Descrição</span>
     <p>{{product.description | linebreaks }}</p>
   </div>

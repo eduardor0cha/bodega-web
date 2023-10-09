@@ -9,7 +9,8 @@
 @import "./pages/add-product.css";
 @import "./pages/cart-page.css";
 @import "./pages/login.css";
-@import "./pages/signin.css";
+@import "./pages/signup.css";
+@import "./pages/finalized-purchase.css";
 
 /* Componentes */
 @import "./components/product-card.css";

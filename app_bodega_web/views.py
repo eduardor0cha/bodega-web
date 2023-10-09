@@ -1,13 +1,14 @@
 import json
+from django.forms import formset_factory
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
-from app_bodega_web.forms import CustomUserCreationForm, LoginForm, ProductForm, RegisterForm
+from app_bodega_web.forms import CustomUserCreationForm, LoginForm, ProductAndAmountForm, ProductForm, RegisterForm
 from django.contrib.auth import logout, login as djangoLogin, authenticate
 from django.contrib import messages
 from django.contrib.auth.models import User
 
 
-from app_bodega_web.models import Address, Product
+from app_bodega_web.models import Address, CartItem, Product
 
 # --- Views públicas ---
 
@@ -38,7 +39,7 @@ def login(request):
         return render(request, "user/login.html", {"form": form})
 
 
-def signin(request):
+def signup(request):
     if (request.method == "POST"):
         form = RegisterForm(request.POST)
 
@@ -48,17 +49,17 @@ def signin(request):
         if not userAlreadyExists:
             if (form.is_valid()):
                 createUserForm = CustomUserCreationForm({
-                    "username": form.data["username"],
-                    "email": form.data["email"],
-                    "password1": form.data["password1"],
-                    "password2": form.data["password2"]
+                    "username": form.cleaned_data["username"],
+                    "email": form.cleaned_data["email"],
+                    "password1": form.cleaned_data["password1"],
+                    "password2": form.cleaned_data["password2"]
                 })
 
                 if (createUserForm.is_valid()):
                     user = createUserForm.save()
 
-                    address = Address(user=user, state=form.data["state"], city=form.data["city"],
-                                      district=form.data["district"], street=form.data["street"], number=form.data["number"])
+                    address = Address(user=user, state=form.cleaned_data["state"], city=form.cleaned_data["city"],
+                                      district=form.cleaned_data["district"], street=form.cleaned_data["street"], number=form.cleaned_data["number"])
                     address.save()
                     messages.info(
                         request, "Cadastrado com sucesso! Realize o login.")
@@ -73,14 +74,14 @@ def signin(request):
                 messages.warning(request, "Formulário inválido.")
         else:
             messages.warning(request, "Esse e-mail já está em uso.")
-        return render(request, "user/signin.html", {"form": form})
+        return render(request, "user/signup.html", {"form": form})
     else:
         if (request.user.is_authenticated):
             return redirect("/")
 
         form = RegisterForm()
 
-        return render(request, "user/signin.html", {"form": form})
+        return render(request, "user/signup.html", {"form": form})
 
 
 def home(request):
@@ -125,7 +126,17 @@ def home(request):
 def productPage(request, slug):
     try:
         product = Product.objects.get(slug=slug)
-        return render(request, "user/product.html", {"product": product})
+
+        ProductAndAmountFormset = formset_factory(ProductAndAmountForm)
+
+        formset = ProductAndAmountFormset(data={
+            "form-TOTAL_FORMS": '1',
+            'form-INITIAL_FORMS': '0',
+            "form-0-productId": product.id,
+            "form-0-amount": 1
+        })
+
+        return render(request, "user/product.html", {"product": product, "formset": formset})
     except:
         return render(request, "user/product.html", {"product": None})
 
@@ -136,7 +147,41 @@ def cartPage(request):
     if not (request.user.is_authenticated):
         return redirect("/login")
 
-    return render(request, "user/cart.html")
+    ProductAndAmountFormset = formset_factory(ProductAndAmountForm)
+
+    cartItems = CartItem.objects.filter(user=request.user)
+
+    data = {
+        "form-TOTAL_FORMS": f'{len(cartItems)}',
+        'form-INITIAL_FORMS': f'{len(cartItems)}',
+    }
+
+    for i, cartItem in enumerate(cartItems):
+        data[f"form-{i}-productId"] = cartItem.product.id
+        data[f"form-{i}-amount"] = cartItem.amount
+
+    formset = ProductAndAmountFormset(data=data)
+
+    if (formset.is_valid()):
+        items = []
+        for form in formset.forms:
+            if (form.is_valid()):
+                try:
+                    product = Product.objects.get(
+                        id=form.cleaned_data["productId"])
+                    items.append({
+                        "product": product,
+                        "amount": form.cleaned_data["amount"]
+                    })
+                except:
+                    pass
+
+        total = sum((item["product"].value - (item["product"].value *
+                    item["product"].discount)) * item["amount"] for item in items)
+
+        return render(request, "user/cart.html", {"formset": formset, "items": items or [], "total": total})
+
+    return redirect("/")
 
 
 def buyProduct(request):
@@ -144,19 +189,108 @@ def buyProduct(request):
         return redirect("/login")
 
     if (request.method == "POST"):
-        body = json.loads(request.body)
+        if ("buy-product" in request.POST):
+            ProductAndAmountFormset = formset_factory(ProductAndAmountForm)
 
-    try:
-        return render(request, "user/buy.html", {"product": None})
-    except:
-        return render(request, "user/buy.html", {"product": None})
+            formset = ProductAndAmountFormset(request.POST)
+
+            if (formset.is_valid()):
+                items = []
+                for form in formset.forms:
+                    if (form.is_valid()):
+                        try:
+                            product = Product.objects.get(
+                                id=form.cleaned_data["productId"])
+                            items.append({
+                                "product": product,
+                                "amount": form.cleaned_data["amount"]
+                            })
+                        except:
+                            pass
+
+                address = {}
+                try:
+                    address = Address.objects.get(user=request.user)
+                except:
+                    pass
+
+                total = sum((item["product"].value - (item["product"].value *
+                            item["product"].discount)) * item["amount"] for item in items)
+
+                return render(request, "user/buy.html", {"formset": formset, "items": items, "address": address, "total": total, "formset": formset})
+        else:
+            ProductAndAmountFormset = formset_factory(ProductAndAmountForm)
+
+            formset = ProductAndAmountFormset(request.POST)
+
+            if (formset.is_valid()):
+                for form in formset.forms:
+                    if (form.is_valid()):
+                        try:
+                            product = Product.objects.get(
+                                id=form.cleaned_data["productId"])
+
+                            cartItem = CartItem.objects.filter(
+                                product=product, user=request.user)
+                            cartItem.delete()
+
+                            cartItem = CartItem(
+                                user=request.user, product=product, amount=form.cleaned_data["amount"])
+                            cartItem.save()
+                        except:
+                            pass
+
+                return redirect("/carrinho")
+    else:
+        return redirect("/")
+
+
+def cartRemove(request):
+    if not (request.user.is_authenticated):
+        return redirect("/login")
+
+    if (request.method == "POST"):
+        product = Product.objects.get(
+            id=request.POST["productId"])
+
+        cartItem = CartItem.objects.filter(
+            product=product, user=request.user)
+        cartItem.delete()
+
+    return redirect("/carrinho")
 
 
 def finalizeThePurchase(request):
     if not (request.user.is_authenticated):
         return redirect("/login")
 
-    return HttpResponseRedirect("/carrinho")
+    if (request.method == "POST"):
+        ProductAndAmountFormset = formset_factory(ProductAndAmountForm)
+
+        formset = ProductAndAmountFormset(request.POST)
+
+        if (formset.is_valid()):
+            for form in formset.forms:
+                if (form.is_valid()):
+                    try:
+                        product = Product.objects.get(
+                            id=form.cleaned_data["productId"])
+
+                        if product.stock > 0:
+                            product.stock -= form.cleaned_data["amount"]
+                            product.save()
+
+                        cartItem = CartItem.objects.get(
+                            product=product, user=request.user)
+                        cartItem.delete()
+                    except:
+                        pass
+
+            return render(request, "user/finalized-purchase.html")
+        else:
+            return redirect("/")
+    else:
+        return redirect("/")
 
 # --- Views privadas ---
 

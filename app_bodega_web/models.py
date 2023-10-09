@@ -98,3 +98,13 @@ class Address(models.Model):
     district = models.CharField(max_length=255)
     street = models.CharField(max_length=255)
     number = models.CharField(max_length=255, blank=True)
+
+
+class CartItem(models.Model):
+    user = models.ForeignKey(
+        get_user_model(), on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    amount = models.PositiveIntegerField()
+
+    class Meta:
+        unique_toguether: ("user", "product")

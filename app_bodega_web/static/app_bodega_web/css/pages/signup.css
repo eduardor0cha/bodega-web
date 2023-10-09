@@ -1,16 +1,16 @@
-.p-signin {
+.p-signup {
   padding: 16px;
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.p-signin__heading {
+.p-signup__heading {
   font-size: 1.5rem;
   font-weight: bold;
 }
 
-.p-signin form {
+.p-signup form {
   display: flex;
   flex-direction: column;
   gap: 16px;

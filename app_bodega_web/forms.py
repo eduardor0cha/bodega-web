@@ -77,3 +77,9 @@ class CustomUserCreationForm(UserCreationForm):
         if commit:
             user.save()
         return user
+
+
+class ProductAndAmountForm(forms.Form):
+    productId = forms.CharField(
+        widget=forms.HiddenInput(attrs={'readonly': 'readonly'}))
+    amount = forms.IntegerField(min_value=1)

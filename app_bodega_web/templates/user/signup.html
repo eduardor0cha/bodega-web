@@ -1,10 +1,10 @@
 {% extends "user/base.html" %}
 
 {% block main %}
-<div class="p-signin">
-  <span class="p-signin__heading">Cadastro</span>
+<div class="p-signup">
+  <span class="p-signup__heading">Cadastro</span>
   <a href="/login">Já possui uma conta? Faça login</a>
-  <form class="p-signin__form" id="p-signin__form" method="POST" action="{% url 'signin-page' %}">
+  <form class="p-signup__form" id="p-signup__form" method="POST" action="{% url 'signup-page' %}">
     {% csrf_token %}
     {% if messages %}
     <ul class="messages">
@@ -30,7 +30,7 @@
       {{form.password2}}
     </div>
     
-    <span class="p-signin__heading">Endereço</span>
+    <span class="p-signup__heading">Endereço</span>
     <span class="bizarre-comment transparent">A gente já sabe o seu endereço, é só formalidades mesmo</span>
     <div class="c-input">
       <label>Estado <span>*</span></label>
