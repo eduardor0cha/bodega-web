@@ -594,6 +594,22 @@
     }
   },
   {
+    "model": "app_bodega_web.product",
+    "pk": 39,
+    "fields": {
+      "name": "Tobias",
+      "slug": "tobias",
+      "description": "Sim. Ele é um bebê.",
+      "value": 999999999999.0,
+      "discount": 0.0,
+      "stock": 1,
+      "imageUrl": "https://i.redd.it/cachorro-a-jato-v0-uyhrhew8s6tb1.png?s=b4b6a73efa110cc85122f9373eee9f4cbcd4a591",
+      "category": "babies",
+      "createdAt": "2023-10-09T17:07:33.283Z",
+      "updatedAt": "2023-10-09T17:07:33.283Z"
+    }
+  },
+  {
     "model": "app_bodega_web.address",
     "pk": 1,
     "fields": {
