@@ -201,6 +201,12 @@ def buyProduct(request):
                         try:
                             product = Product.objects.get(
                                 id=form.cleaned_data["productId"])
+
+                            if (product.stock < form.cleaned_data["amount"]):
+                                messages.warning(
+                                    request, "Quantidade maior que o estoque.")
+                                return redirect(f"/produto/{product.slug}")
+
                             items.append({
                                 "product": product,
                                 "amount": form.cleaned_data["amount"]
@@ -229,6 +235,11 @@ def buyProduct(request):
                         try:
                             product = Product.objects.get(
                                 id=form.cleaned_data["productId"])
+
+                            if (product.stock < form.cleaned_data["amount"]):
+                                messages.warning(
+                                    request, "Quantidade maior que o estoque.")
+                                return redirect(f"/produto/{product.slug}")
 
                             cartItem = CartItem.objects.filter(
                                 product=product, user=request.user)
@@ -276,15 +287,19 @@ def finalizeThePurchase(request):
                         product = Product.objects.get(
                             id=form.cleaned_data["productId"])
 
-                        if product.stock > 0:
-                            product.stock -= form.cleaned_data["amount"]
-                            product.save()
+                        if (product.stock < form.cleaned_data["amount"]):
+                            messages.warning(
+                                request, "Quantidade maior que o estoque.")
+                            return redirect(f"/produto/{product.slug}")
+
+                        product.stock -= form.cleaned_data["amount"]
+                        product.save()
 
                         cartItem = CartItem.objects.get(
                             product=product, user=request.user)
                         cartItem.delete()
                     except:
-                        pass
+                        return render(request, "user/failed-purchase.html")
 
             return render(request, "user/finalized-purchase.html")
         else:

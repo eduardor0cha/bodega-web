@@ -1,0 +1,12 @@
+{% extends "user/base.html" %}
+
+{% block main %}
+<div class="p-failed-purchase">
+  <h2 class="p-failed-purchase__heading">Compra não finalizada.</h2>
+  <p>Algo de errado aconteceu. Desculpe-nos pelo inconveniente. :'(</p>
+  <i class="fa-solid fa-circle-xmark fa-8x"></i>
+  <div class="p-failed-purchase__footer">
+    <button class="c-button" onclick="location.href = '/'">PÁGINA INICIAL</button>
+  </div>
+</div>
+{% endblock %}
