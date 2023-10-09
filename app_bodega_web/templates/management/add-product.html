@@ -3,7 +3,7 @@
 {% block main %}
 <div class="p-add-product">
   <h2 class="p-add-product__heading">Criar produto</h2>
-  <form class="p-add-product__form" id="p-add-product__form" method="post" action="{% url 'create-product'%}">
+  <form class="p-add-product__form" id="p-add-product__form" method="post" action="{% url 'create-product'%}" autocomplete="off">
     {% csrf_token %}
     <div class="c-input">
       <label>

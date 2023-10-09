@@ -1,34 +1,607 @@
 [
   {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$eLCqmphacoWlyntWibw0tP$ijkSdMTQEHsi9FU2mGwanPhCIekwN2i6AGlWRgeFvaY=",
+      "last_login": "2023-10-09T04:19:21.207Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "admin@admin.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-10-09T04:11:07.058Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
     "model": "app_bodega_web.product",
     "pk": 1,
     "fields": {
-      "name": "Nutella 650G Ferrero Creme De Avelã",
-      "slug": "nutella-650g-ferrero-creme-de-avelã",
-      "description": "A famosa Nutella 650g Ferrero, queridinha por todos é ideal para uma infinidade de produções. é super cremosa, e deliciosa; podendo ser utilizada como recheio de bolos; ovos de Páscoa; tortas; trufas; pães; para decoração e cobertura das famosas taças de sorvete; recheios de docinhos; acompanhando frutas; em torradas para dar aquela incrementada em seu café da manhã e o que mais você quiser criar. E pra você que nunca teve a experiência de provar desse produto, irá se impressionar com tanta cremosidade e sabor. Nutella deixa tudo mais gostoso, pois os ingredientes usados são cuidadosamente selecionados e de altíssima qualidade.\n\nIngredientes:\n- Açúcar, óleo vegetal (palma), avelãs (13%), leite desnatado em pó (8,7%), cacau em pó parcialmente desengordurado (7,4%), emulsificante lecitinas, aromatizante. Componentes do leite: 8,7%. Alérgicos: Contém avelãs e derivados de leite e soja. Contém lactose. Não contém glúten.\n\nQuantidade:\n- Contém 650g\n\nInformação Nutricional de uma Porção de 20g:\n- Valor Energético: 107kcal = 446kj. Carboidratos: 12g. Proteínas: 1,3g. Gorduras Totais: 6,2g. Gorduras Saturadas: 2,1g. Gorduras Trans: 0g. Fibra Alimentar: 0,6g. Sódio: 8,4mg.\n\nSobre a Marca:\n- nutella traz mais sabor aos pães e frutas do café da manhã, e é capaz de abrir o mais delicioso sorriso no rosto de toda a família e deixar qualquer manhã muito mais gostosa. Criada em 1940 na Itália por Pietro Ferrero, nutella é o mais conhecido e vendido creme de avelãs do mundo e atualmente está disponível em mais de 75 países e desde 2005 no Brasil.",
-      "value": 45.35,
-      "discount": 0.12,
+      "name": "Nutella Creme De Avelã Com Cacau Ferrero 350G",
+      "slug": "nutella-creme-de-avelã-com-cacau-ferrero-350g",
+      "description": "Nutella Creme De Avelã Com Cacau Ferrero 350G\r\n \r\nA nutella ferrero é uma marca de bombons comercializados pela ferrero, qualidade e excelência fazem parte da linha de produtos que conquistou o consumidor brasileiro. A creme de avelã com cacau nutella ferrero 350g é o mais conhecido e vendido creme de avelã do mundo. O creme é fabricado com ingredientes especialmente selecionados que dão o sabor e inconfundível. Perfeita para trazer mais sabor aos pães e frutas do café da manhã ou da tarde. Não contém glúten. Confira mais detalhes deste produto.\r\n\r\nIngredientes: açúcar, óleo vegetal (palma), avelãs (13%), cacau em pó parcialmente desengordurado (7,4%), leite desnatado em pó (6,6%), soro de leite em pó, emulsificante lecitinas, aromatizante. Constituintes do leite: 8,8%.\r\nAlérgicos: contém avelãs, leite e derivados, derivados de soja.\r\n\r\nInformação nutricional:\r\nPorção 20g (1 colher da sopa)\r\nValor energético 107kcal (5%)\r\nCarboidratos 12g (4%)\r\nProteínas 1,3g (2%)\r\nGorduras totais 6,2g (11%)\r\nGorduras saturadas 2,1g (10%)\r\nGorduras trans 0g (0%)\r\nFibra alimentar 0,6g (2%)\r\nSódio 8,4mg (1%)",
+      "value": 26.29,
+      "discount": 0.0,
       "stock": 464,
-      "imageUrl": "https://images-americanas.b2w.io/produtos/2470079201/imagens/nutella-650g-ferrero-creme-de-avela/2470079201_1_xlarge.jpg",
+      "imageUrl": "https://imgs.casasbahia.com.br/1505991542/1xg.jpg",
       "category": "supermarket",
-      "createdAt": "2023-10-04T00:19:33.592953",
-      "updatedAt": "2023-10-04T00:19:33.592953"
+      "createdAt": "2023-10-09T04:15:48.009Z",
+      "updatedAt": "2023-10-09T04:15:48.009Z"
     }
   },
   {
     "model": "app_bodega_web.product",
     "pk": 2,
     "fields": {
-      "name": "Pilha Alcalina AAA Palito DURACELL com 4 unidades",
-      "slug": "pilha-alcalina-aaa-palito-duracell-com-4-unidades",
-      "description": "Quando se trata de pilhas confiáveis e de longa duração, Duracell é a melhor opção. Projetadas para fornecer aquela energia extra as pilhas AA (Pilha Pequena) proporcionam energia confiável aos aparelhos do dia a dia, como brinquedos, controles remotos, consoles de jogos portáteis, fechaduras eletrônicas, lanternas, etc. Além disso, a tecnologia de Duracell preserva a energia das pilhas que ainda não foram usadas, por até 10 anos. As Pilhas Alcalinas Duracell duram até 10 vezes mais* vs. pilhas comuns de zinco-carbono. * Os resultados podem variar por dispositivo.",
-      "value": 14.52,
-      "discount": 0,
-      "stock": 79,
-      "imageUrl": "https://m.media-amazon.com/images/I/61nRIORTp4L._AC_SX679_.jpg",
+      "name": "Pilha AAA Palito Alcalina 4 Unidades - Duracell",
+      "slug": "pilha-aaa-palito-alcalina-4-unidades---duracell--2",
+      "description": "Imagine nossa vida moderna se todos os equipamentos eletrônicos precisassem estar ligados constantemente às tomadas por meio de fios, incluindo controles, brinquedos e acessórios. Isso seria bem complexo durante a rotina agitada que muitas pessoas têm. A invenção da pilha permitiu que dispositivos elétricos pudessem ser utilizados em ambientes externos, longe das tomadas, facilitando bastante o uso de muitas peças. Com as 4 unidades de pilhas palito alcalinas Duracell 80647384, o dia a dia ficou bem mais prático. Elas são indicadas para controle remoto, brinquedos, lanternas e outros acessórios.",
+      "value": 39.99,
+      "discount": 0.2,
+      "stock": 88,
+      "imageUrl": "https://a-static.mlcdn.com.br/800x560/pilha-aaa-palito-alcalina-4-unidades-duracell/magazineluiza/202727200/a394594ed5e1f4c0b3b586776fca602a.jpg",
       "category": "supermarket",
-      "createdAt": "2023-10-04T00:23:37.065446",
-      "updatedAt": "2023-10-04T00:23:37.065446"
+      "createdAt": "2023-10-09T04:23:23.845Z",
+      "updatedAt": "2023-10-09T11:47:20.167Z"
+    }
+  },
+  {
+    "model": "app_bodega_web.product",
+    "pk": 3,
+    "fields": {
+      "name": "Azeite Extravirgem Gallo 250ml",
+      "slug": "azeite-extravirgem-gallo-250ml",
+      "description": "Azeite Extra Virgem Gallo é uma balanceada combinação de aromas, o azeite extra virgem possui sabor marcante que dá um toque especial a qualquer prato, obtido através de um blend de azeitonas de altíssima qualidade cultivadas.",
+      "value": 33.48,
+      "discount": 0.0,
+      "stock": 37,
+      "imageUrl": "https://images-americanas.b2w.io/produtos/5424219321/imagens/azeite-extravirgem-gallo-250ml/5424219321_1_xlarge.jpg",
+      "category": "supermarket",
+      "createdAt": "2023-10-09T04:27:00.016Z",
+      "updatedAt": "2023-10-09T04:27:00.016Z"
+    }
+  },
+  {
+    "model": "app_bodega_web.product",
+    "pk": 4,
+    "fields": {
+      "name": "Samsung Galaxy S21 FE , Violeta , 128GB",
+      "slug": "samsung-galaxy-s21-fe-,-violeta-,-128gb--2",
+      "description": "Smartphone Samsung Galaxy S21 FE 5G, 128GB, 6GB RAM, Processador Octa Core última geração, Bateria de 4500mAh, Câmera Tripla Traseira de 12MP + 12MP + 8MP, Selfie de 32MP, Tela Infinita de 6.4\" 120Hz, Dual Chip, Android",
+      "value": 3999.0,
+      "discount": 0.5,
+      "stock": 327,
+      "imageUrl": "https://m.media-amazon.com/images/I/71YQA5lsLfL._AC_SX679_.jpg",
+      "category": "tecnology",
+      "createdAt": "2023-10-09T04:30:21.729Z",
+      "updatedAt": "2023-10-09T11:47:20.143Z"
+    }
+  },
+  {
+    "model": "app_bodega_web.product",
+    "pk": 5,
+    "fields": {
+      "name": "Notebook VAIO Core i5 1135G7 8GB 512GB SSD Tela Full HD 15.6\"",
+      "slug": "notebook-vaio-core-i5-1135g7-8gb-512gb-ssd-tela-full-hd-15.6\"",
+      "description": "O VAIO FE 15 possui design moderno e clássico com detalhes especiais, visual fino e elegante que proporciona mobilidade. Pronto para executar tarefas, processador Core i, Intel Iris Xe Graphics e placa gráfica UHD, novas arquiteturas de núcleo e de gráficos, aprimoramentos de desempenho baseados em Inteligência Artificial.\r\n\r\nFast startup, inicialização mais rápido do que nunca com a potência do SSD NVMe slot M.2 e memória RAM de até 64GB, trazendo mais agilidade, rapidez e muitos benefícios. Velocidade e experiência de trabalhar em diversos programas com o processador Intel Core i de 11ª geração. Maior performance gráfica, qualidade para jogar, mais desempenho na criação de vídeos e trabalhos com fotos e suítes do pacote Office.\r\n\r\nFaça videochamadas de qualquer lugar a qualquer hora com webcam integrada e dois microfones digitais que ampliam a captação do áudio, pois o modo cancelamento inteligente de ruído deixa o foco na voz. Ao finalizar a conversa, o webcam cover dá privacidade, basta deslizar e fechar a câmera. Experiência visual incrível em alta definição Full HD com a tela de 15.6 polegadas antirreflexo, proporcionando alta qualidade da imagem.\r\n\r\nAlta performance e baixo consumo, trabalhe mesmo sem tomadas por perto. A bateria com duração de até 10 horas* ajuda você a produzir mais. Aliada ao sistema operacional Windows 11 Home, agrega facilidade com recursos de produtividade em uma interface mais moderna e sistema estável.\r\n\r\nConecte-se com facilidade. Wi-Fi 5 com destaque para velocidade e bluetooh 5.1 que aprimora aspectos de localização e pode não só identificar um aparelho compatível próximo, mas apontar a sua direção. Portas de conexão de última geração com USB, USB C, HDMI.\r\n\r\nSinta o conforto e a ergonomia durante a digitação. Escreva textos e complete planilhas muito mais rápido com teclado alfanumérico. Em caso de derramamento de água, ele é resistente a até 330ml de água. Proteção completa com a Alta durabilidade e sistema Comfort Key, teclas maiores pensadas para proporcionar mais comodidade ao digitar e Caps Look com led indicando estar acionado. Tecnologia Ergolift, um modo de elevação do teclado ao abrir o notebook a um ângulo de 135º, para bem-estar em longos período utilizando o notebook, além de melhorar a ventilação da máquina.\r\n\r\nComputador com mais desempenho e design inovador pode ser levado para qualquer lugar. Mais fino com apenas 19,8 mm de espessura e mais leve, o VAIO FE15 possui apenas 1,75kg. União de benefícios imprescindíveis para um notebook de alta qualidade e performance.\r\n\r\nA Vaio carrega em sua história o compromisso com a qualidade e alta durabilidade, que entrega o máximo de performance em qualquer atividade, com um desenho atemporal para muitos anos de uso. Ultrapasse seus limites e atreva-se a ser você com o VAIO FE 15.",
+      "value": 3399.0,
+      "discount": 0.15,
+      "stock": 309,
+      "imageUrl": "https://imgs.casasbahia.com.br/55056400/1g.jpg",
+      "category": "tecnology",
+      "createdAt": "2023-10-09T04:32:50.255Z",
+      "updatedAt": "2023-10-09T04:33:35.206Z"
+    }
+  },
+  {
+    "model": "app_bodega_web.product",
+    "pk": 6,
+    "fields": {
+      "name": "Câmera Sony Alpha a7C Mirrorless 4K ILCE7C",
+      "slug": "câmera-sony-alpha-a7c-mirrorless-4k-ilce7c",
+      "description": "Compacta e Profissional, a Câmera Sony Alpha a7C Mirrorless 4K / ILCE7C (Corpo Preta) combina a qualidade e as vantagens de um sensor Full-Frame e o processador de imagem bionz X com um design de corpo especialmente portátil e elegante. Apresentando um sensor cmos Exmor R bsi de 24.2MP, a Sony a7C Mirrorless 4K oferece recursos híbridos para atender às necessidades de gravação de foto e vídeo, juntamente com um formato para transporte diário, o dia todo. Wi-Fi e Bluetooth integrados também permitem conectividade sem fio para controle remoto da câmera e compartilhamento de arquivos com um dispositivo móvel conectado. Sensor Exmor R bsi cmos de 24,2 mp e processador de imagem bionz x Apresentando um design retroiluminado, esta Mirrorless 4K Sony a7C possui o sensor cmos Exmor R de Full-Frame de 24.2 megapixels funciona com o processador de imagem bionz X para oferecer fotos e vídeos de alta resolução, minimizando o ruído e melhorando a velocidade. Esta estrutura de sensor funciona com um design de lente no chip sem intervalos e um revestimento anti-reflexo para melhorar a coleta de luz e aprimorar os detalhes. Gravação de vídeo uhd 4K no formato xavc s A gravação interna de vídeos uhd 4K é possível em várias taxas de quadro de até 30 fps e usando a sobreamostragem de 2,4x renderiza mais detalhes e a leitura de pixel completo é possível para imagens de qualidade superior com moiré e aliasing reduzidos. A gravação Full HD 1080p também é suportada em taxas de quadro de até 120 qps e ambas as resoluções utilizam o formato xavc S de 100 Mb / s contido em um wrapper MP4 com amostragem 4: 2: 0 8 bits. A gravação de alta velocidade a 120 qps também permite a gravação de filmes em câmera lenta 4x e 5x com a taxa de quadros definida para 30p ou 24p. Oferecendo controles de gama e cores personalizáveis, a Sony a7C Mirrorless 4K permite que os usuários ajustem gama, nível de preto, joelho, nível de cor e muito mais. Além disso, os usuários podem usar a mesma Curva Gama S-Log2 encontrada em Câmeras Cinema Sony de última geração que comprime até 1300% mais faixa dinâmica no sinal de vídeo do que o REC709 tradicional, para maior flexibilidade de pós-produção. Desenho Corporal O design compacto e leve do corpo, junto com um layout inspirado no telêmetro, tornam a Câmera Sony Alpha a7C Mirrorless Modelo ILCE7C/B uma câmera elegante e portátil para fotos do dia a dia. Comparada com outras Câmeras Sony da série a7, a Mirrorless A7c 4K ILCE7C/B é aproximadamente 20% menor e mais leve, semelhante ao tamanho de uma câmera de formato aps-c. Um visor eletrônico oled xga de 0,39\" do tipo é apresentado e tem uma resolução de 2.36m de pontos e ampliação de 0.59x para uma visualização nítida e clara em detalhes elevados. O lcd traseiro traseiro de 3.0\" e 921.6k pontos apresenta um design de ângulo variável aberto para se beneficiar dos ângulos altos, baixos e frontais. é também uma tela sensível ao toque para controle intuitivo e reprodução. O chassi de liga de magnésio junto com um design vedado às intempéries oferece uma construção geral durável para uso em uma variedade de condições. A Bateria Sony NP-FZ100 de grande capacidade oferece aproximadamente 740 fotos por carga ao trabalhar com o lcd traseiro ou 680 fotos por carga ao trabalhar com o evf. Slot de cartão de memória sd único é classificado para suportar cartões de memória uhs-ii para velocidades de transferência rápidas. Uma porta USB 3.2 Gen 1 Type-C oferece suporte de tethering rápido e confiável e também permite que a câmera seja carregada da fonte de alimentação do host enquanto estiver conectada. Entrada de Sapata Multi Interface Shoe As portas de microfone e fone de ouvido de 3,5 mm estão disponíveis para maior controle de gravação de áudio. O Wi-Fi integrado permite que o Mirrorless A7c 4K ILCE7C/B compartilhe instantaneamente imagens com dispositivos móveis para compartilhamento direto on-line em redes sociais, via e-mail e sites de armazenamento em nuvem. nfc (Near Field Communication) também é suportado, o que permite a conexão de um toque entre a câmera e dispositivos móveis compatíveis; nenhuma configuração complexa é necessária. Uma vez conectado, o dispositivo móvel vinculado também pode exibir uma imagem de exibição ao vivo em sua tela e controlar remotamente o obturador da câmera. A conectividade Bluetooth permite a aquisição de dados de localização. Sistema af Híbrido Rápido Cobrindo a maior parte da área da imagem, um sistema Fast Hybrid af incorpora 693 pontos de detecção de fase junto com 425 áreas de detecção de contraste para focagem rápida e precisa em uma variedade de condições de iluminação com sensibilidade até -4 ev. Este sistema de foco está disponível para uso em todos os modos de gravação, para beneficiar aplicativos de vídeo e fotos. Estabilização de imagem SteadyShot inside de 5 eixos Apesar da estatura elegante da Sony a7C, ela possui um sistema de estabilização de imagem SteadyShot inside de 5 pontos de 5 pontos que compensa vários tipos de tremido de câmera encontrados durante a captura de fotos e vídeo com as mãos. Isso permite que os usuários usem com segurança qualquer lente, até mesmo lentes adaptadas, para imagens críticas sem encontrar desfoque devido ao movimento da câmera. Revendedor Autorizado Sony Garantia Nacional",
+      "value": 11999.99,
+      "discount": 0.0,
+      "stock": 23,
+      "imageUrl": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTAxDm1dWQi8rS1MFMqDhBh3rqoBbN3DryRsl_u6aMs0M2G4L-vdgDLSV6LLjhWl0JU5D82seDiGkPpyPyxd59G8WfEhh8IkuoFp9q4UVE&usqp=CAE",
+      "category": "tecnology",
+      "createdAt": "2023-10-09T04:35:14.605Z",
+      "updatedAt": "2023-10-09T04:36:17.515Z"
+    }
+  },
+  {
+    "model": "app_bodega_web.product",
+    "pk": 7,
+    "fields": {
+      "name": "Guarda Roupa Casal C/espelho 3 Pts 1 Gav Alice Branco",
+      "slug": "guarda-roupa-casal-c-espelho-3-pts-1-gav-alice-branco",
+      "description": "O Guarda Roupa Com Espelho 3 Portas 1 Gaveta Alice, é um roupeiro moderno com gaveta, além do ótimo espaço interno, ele tem um bonito acabamento e muito resistentes que dão maior destaque à cor.\r\n\r\nDetalhes Técnicos:\r\nMedidas do Guarda-roupa Montado: A:190cm | L:170cm | P:47cm\r\nMedidas do Espelho: 0508X0552X0003MM\r\n\r\nMateriais de Fabricação:\r\n- Material MDP 12 e 15mm\r\n- Revestimento: FF Fosco (Finish Foil)\r\n- Corrediça Metálica\r\n- Material dos pés: PVC\r\n- Material Cabideiro: Bastão Madeira\r\n-Tonalidade: Branco\r\n- Pintura semibrilho\r\n- Puxador : Polietileno\r\n\r\nConteúdo da Embalagem:\r\n- 01 Guarda-roupa com Espelho\r\n- Acessório para Montagem\r\n\r\nObservações Importantes:\r\n- Imagens ambientadas meramente ilustrativas, objetos decorativos não compõe o produto;\r\n- Produto novo, garantia somente para defeitos de fabricação: 3 meses;\r\n- Não realizamos entregas em zonas rurais, via caminhos fluviais e distritos, NÃO ACEITAMOS CEP GERAL;\r\n- Não trabalhamos com entrega agendada. O recebedor deve ter mais de 18 anos. O valor do frete não inclui: subida de escada, elevador ou lançamento de produto, em condomínio residencial a entrega é feita somente até a portaria. As entregas são realizadas em dias e horários comerciais;\r\n- Ao receber o produto observe se a embalagem está em perfeita condição. Confira atentamente a quantidade de volumes;\r\n- Produto entregue desmontado. É responsabilidade do cliente a montagem/instalação do produto, inclusive despesa para sua realização. Recomendamos a contratação de um profissional especializado;\r\n- Evitar a exposição direta à luz solar e à umidade. Limpar com pano macio e seco, não utilizar produtos químicos;\r\n- A cor do produto pode variar de acordo com o monitor, a iluminação do ambiente ou sua percepção visual.",
+      "value": 1069.0,
+      "discount": 0.3,
+      "stock": 56,
+      "imageUrl": "https://a-static.mlcdn.com.br/800x560/guarda-roupa-casal-c-espelho-3-pts-1-gav-alice-branco-moveis-arapongas-moveis-arapongas/moveisarapongas2/139451/ddbeebf3e5128fb18656002a674dfd3c.jpeg",
+      "category": "house-and-furniture",
+      "createdAt": "2023-10-09T04:39:00.147Z",
+      "updatedAt": "2023-10-09T04:39:56.947Z"
+    }
+  },
+  {
+    "model": "app_bodega_web.product",
+    "pk": 8,
+    "fields": {
+      "name": "Jogo de Armários Titan Natura Preto",
+      "slug": "jogo-de-armários-titan-natura-preto",
+      "description": "O Conjunto de Armário e Gaveteiroé perfeito para você que deseja melhorar o visual do seu cômodo!\r\n\r\nInformações do Armário:\r\n\r\nAltura:160cm\r\n\r\nLargura: 80 cm\r\n\r\nComprimento: 40 cm\r\n\r\nCor:Natura / Preto\r\n\r\nMaterial:MDP-BP de 15 mm\r\n\r\nPortas: Sim (2)\r\n\r\nPrateleira: Sim (3, sendo 2 móvel e 1 fixa)\r\n\r\nPossui sapata regulável\r\n\r\nInformações do Gaveteiro:\r\n\r\nAltura: 58,5cm\r\n\r\nLargura: 49,5cm\r\n\r\nComprimento: 45 cm\r\n\r\nCor:Natura / Preto\r\n\r\nMaterial:MDP-BP\r\n\r\nGavetas: Sim (3)\r\n\r\nPossui Sapatas Niveladoras\r\n\r\nItens Inclusos\r\n\r\n1Armário\r\n\r\n1 Gaveteiro\r\n\r\nKit completo para montagem, manual detalhado de instruções para montagem.\r\n\r\nGarantia\r\n\r\n3 meses contra defeito de fabricação\r\n\r\nInstruções de Limpeza\r\n\r\nLimpar com flanela ou pano macio seco, não utilizar produtos abrasivos, desengordurantes, álcool ou solvente. Não expor o produto diretamente à luz solar e à umidade\r\n\r\nSugerimos a contratação de um montador profissional para a montagem do produto. Não nos responsabilizamos por avarias causadas no ato da montagem.\r\n\r\nNão nos responsabilizamos pela montagem e desmontagem do produto no ato da entrega e devolução, assim como os custos gerados nestas situações.\r\n\r\nA transportadora entregará o produto no andar térreo do endereço de entrega. Não nos responsabilizamos por subir escadas, corredores e elevadores ou\r\n\r\ntransporte por guincho em apartamentos.",
+      "value": 1787.99,
+      "discount": 0.05,
+      "stock": 89,
+      "imageUrl": "https://a-static.mlcdn.com.br/800x560/jogo-de-armarios-titan-natura-preto-moveis-belo/venerarejoias/arbe0717957754cj/c32d6bef22239c8620ddf4a3a409003f.jpeg",
+      "category": "house-and-furniture",
+      "createdAt": "2023-10-09T04:42:38.264Z",
+      "updatedAt": "2023-10-09T04:42:38.265Z"
+    }
+  },
+  {
+    "model": "app_bodega_web.product",
+    "pk": 9,
+    "fields": {
+      "name": "Jogo de Toalhas de banho 2 Pçs Buddemeyer Fio Penteado Canelado",
+      "slug": "jogo-de-toalhas-de-banho-2-pçs-buddemeyer-fio-penteado-canelado--2",
+      "description": "O Jogo de Toalhas Banho + Rosto Buddemeyer Fio Penteado Canelado é composto por 2 itens, sendo eles uma toalha banho (70cm x 1,40m) e uma toalha de rosto (48cm x 85cm) produzidas em 100% algodão fio penteado. O corpo das toalhas possui acabamento canelado super macio e com detalhe de barra delicada.Possui uma excelente gramatura de 480g/m2, que proporcionam mais conforto e aconchego ao seu pós-banho, sendo um produto de qualidade superior e maior durabilidade. O acabamento especial Buddemeyer proporciona alta capacidade de absorção, oferecendo maciez, toque delicado e volume acentuado, além de brilho natural que realça as cores.A Buddemeyer é referencia em qualidade e estilo, e agora também está disponível na Decori Lar.",
+      "value": 114.9,
+      "discount": 0.1,
+      "stock": 67,
+      "imageUrl": "https://a-static.mlcdn.com.br/800x560/jogo-de-toalhas-de-banho-2-pcs-buddemeyer-fio-penteado-canelado-diversas-cores/decorilar/ccb2e9c43df911eeb6374201ac18502e/62d2c3295660f671ff37a7d1469e034f.jpeg",
+      "category": "house-and-furniture",
+      "createdAt": "2023-10-09T09:38:41.727Z",
+      "updatedAt": "2023-10-09T11:47:20.156Z"
+    }
+  },
+  {
+    "model": "app_bodega_web.product",
+    "pk": 10,
+    "fields": {
+      "name": "Micro-ondas Electrolux 34L MEO44 Branco",
+      "slug": "micro-ondas-electrolux-34l-meo44-branco",
+      "description": "O Micro-ondas Electrolux MEO44 com capacidade de 34 Litros, vai ser um auxílio e tanto no preparo de suas receitas. Com ele você pode fazer desde receitas do dia a dia como um menu Light com receitas mais saudáveis. E se por acaso ficar aquele odor, com a função tirar odor voc~e não vai ter mais esse problema, deixando sua cozinha sempre cheirosa e seu micro-ondas sempre limpinho. isso sem falar que você pode assistir aos vídeos no seu celular com o QR Code e prepare as receitas preferidas das crianças com o Menu Kids, com as receitas preferidas dos pequenos, como pipoca e brigadeiro. E a para facilitar ainda mais ele possui a função manter aquecido, seus pratos ficam na temperatura ideal.",
+      "value": 660.0,
+      "discount": 0.0,
+      "stock": 34,
+      "imageUrl": "https://a-static.mlcdn.com.br/800x560/micro-ondas-electrolux-34l-meo44-branco/magazineluiza/011398701/d59adbb56e56f2b3df7148f8420abd09.jpg",
+      "category": "home-appliances",
+      "createdAt": "2023-10-09T09:41:02.624Z",
+      "updatedAt": "2023-10-09T09:41:02.624Z"
+    }
+  },
+  {
+    "model": "app_bodega_web.product",
+    "pk": 11,
+    "fields": {
+      "name": "Geladeira Brastemp Frost Free Duplex BRM44HB",
+      "slug": "geladeira-brastemp-frost-free-duplex-brm44hb",
+      "description": "Se você está em busca de uma geladeira, com design inovador, praticidade e tecnologia, o Refrigerador Brastemp BRM44HB é o eletrodoméstico perfeito. Com uma capacidade de 375 litros no total, ela dispõe de 86 litros para o freezer somados aos 288 litros do refrigerador. Tudo isso com um painel eletrônico de fácil manuseio.\r\n\r\nCom o compartimento Latas e Long Necks se encaixa perfeitamente no freezer ou na geladeira e possibilita gelar as bebidas de forma eficaz. Já o compartimento extrafrio, gele as bebidas mais rápido e conserve melhor frios e laticínios.",
+      "value": 3279.0,
+      "discount": 0.05,
+      "stock": 8,
+      "imageUrl": "https://imgs.casasbahia.com.br/12731686/1xg.jpg",
+      "category": "home-appliances",
+      "createdAt": "2023-10-09T09:43:11.075Z",
+      "updatedAt": "2023-10-09T09:43:11.075Z"
+    }
+  },
+  {
+    "model": "app_bodega_web.product",
+    "pk": 12,
+    "fields": {
+      "name": "Fogão Dako 5 Bocas Supreme Glass com Mesa de Vidro e Acendimento Automático",
+      "slug": "fogão-dako-5-bocas-supreme-glass-com-mesa-de-vidro-e-acendimento-automático--2",
+      "description": "Se você deseja um fogão resistente e moderno, encontrou o Fogão Supreme Glass, ele possui o melhor desempenho para te ajudar em diversos tipos de receitas. Seja um assado ou um prato especial, este fogão Dako é perfeito, conta com 5 bocas, sendo um queimador tripla chama, proporcionando mais agilidade no cozimento dos alimentos.\r\n\r\nCom um forno amplo, você poderá preparar receitas para toda a família, desde aquele assado suculento até um bolo enorme para matar a fome de todos. Depois é só aproveitar o recurso da esmaltação especial para limpar o forno rapidamente, deixando tudo organizado.\r\n\r\nTudo isso, em um fogão com design moderno e mesa de vidro temperado inspirado no acabamento de cooktops, a cor preta deixa sua cozinha inovadora!",
+      "value": 1799.0,
+      "discount": 0.0,
+      "stock": 78,
+      "imageUrl": "https://imgs.casasbahia.com.br/15215566/1g.jpg",
+      "category": "home-appliances",
+      "createdAt": "2023-10-09T09:45:06.074Z",
+      "updatedAt": "2023-10-09T11:47:20.180Z"
+    }
+  },
+  {
+    "model": "app_bodega_web.product",
+    "pk": 13,
+    "fields": {
+      "name": "Bicicleta Aro 29 Spaceline Star 21 Marchas, Quadro de Alumínio e Freio a Disco",
+      "slug": "bicicleta-aro-29-spaceline-star-21-marchas,-quadro-de-alumínio-e-freio-a-disco",
+      "description": "A incrível Bicicleta Aro 29 Star da Spaceline é perfeita para quem ama adrenalina e aventura!\r\n\r\nCom um design moderno e inspirador, ela possui uma estética que destaca a velocidade, agilidade e aerodinâmica, ideal para quem quer investir em trilhas leves em diferentes tipos de terreno, ou em passeios ao ar livre nos momentos de lazer, tudo com eficiência nas pedaladas e alto rendimento!\r\nEla conta com suspensão dianteira para controlar os impactos sofridos pelo pneu, garantindo mais leveza, absorção do choque e maior controle na direção. Também possui câmbios importados que irão permitir uma passagem de marchas mais ágil, sem interferências, além de melhor performance e durabilidade.\r\nA Bicicleta Star Spaceline possui quadro de alumínio leve e resistente, 21 velocidades e passadores Grip Shift que permitem uma troca rápida e eficaz. Além disso, o freio a disco mecânico oferece maior tranquilidade e segurança nas frenagens.\r\n\r\nNão perca mais tempo e garanta agora mesmo a sua!",
+      "value": 899.0,
+      "discount": 0.0,
+      "stock": 44,
+      "imageUrl": "https://imgs.casasbahia.com.br/55055448/1g.jpg",
+      "category": "sports-and-fitness",
+      "createdAt": "2023-10-09T09:47:54.085Z",
+      "updatedAt": "2023-10-09T09:47:54.085Z"
+    }
+  },
+  {
+    "model": "app_bodega_web.product",
+    "pk": 14,
+    "fields": {
+      "name": "Whey Protein 100% - 900g - Cookies & Cream - Max Titanium",
+      "slug": "whey-protein-100%---900g---cookies-&-cream---max-titanium",
+      "description": "100% Whey é um suplemento a base de proteína concentrada do soro do leite (Whey Protein Concentrate), matéria-prima elaborada com alta tecnologia, de elevado valor biológico, rápida digestibilidade e alta concentração de aminoácidos essenciais, que são fatores de relevância para auxiliar a síntese proteica muscular. O consumo de suplementos proteicos, associado à uma alimentação saudável e prática de atividade física auxilia na formação de músculos e ossos. 100% Whey fornece 20g de proteína, 4.597 mg de BCAAs e 10,1g de aminoácidos essenciais em 30g de produto.\r\n\r\nMODO DE PREPARO\r\nPara o preparo de uma porção, misture 30g (2 dosadores) do produto em 200mL (1 copo) de água ou outra bebida de sua preferência (leite integral ou desnatado, por exemplo) com o auxílio de um liquidificador ou coqueteleira.\r\n\r\nSUGESTA~O DE USO\r\nUtilize de uma a duas porções ao dia, ou conforme orientação de nutricionista ou médico.\r\n\r\nLACTOSE\r\nContem.\r\n\r\nGLUTÉN\r\nContem.\r\n\r\nALERGICOS\r\nCONTÉM DERIVADOS DE LEITE, SOJA E TRIGO. PODE CONTER DERIVADOS DE OVO, AMENDOIM, AVEIA, AVELÃ, CASTANHA-DE-CAJU, CASTANHA-DO-PARÁ, CENTEIO, CEVADA, MACADÂMIA E NOZES.\r\n\r\n* Antes do consumo, sugerimos que leia atentamente a embalagem. Todas as informações sobre produtos possuem apenas propósitos educativos e não tem a intenção de substituir diagnósticos, prescrições ou orientações profissionais. Imagem meramente ilustrativa.",
+      "value": 98.99,
+      "discount": 0.0,
+      "stock": 156,
+      "imageUrl": "https://imgs.casasbahia.com.br/1512353429/1xg.jpg",
+      "category": "sports-and-fitness",
+      "createdAt": "2023-10-09T09:50:19.394Z",
+      "updatedAt": "2023-10-09T09:50:19.394Z"
+    }
+  },
+  {
+    "model": "app_bodega_web.product",
+    "pk": 15,
+    "fields": {
+      "name": "Bola de Basquete BT500 T7 Tarmak",
+      "slug": "bola-de-basquete-bt500-t7-tarmak--2",
+      "description": "Desenvolvido para a prática de basquete. A Tarmak, marca exclusiva da Decathlon desenvolveu a bola BT500, com uma qualidade incrível e homologada pela FIBA -Federação Internacional de Basquete-.\r\n\r\nCaracterísticas:\r\nResistência\r\nBoa resistência graças ao revestimento em poliuretano de 1,4 mm\r\n\r\nTração\r\nBoa aderência graças ao perfil cavado dos canais.\r\n\r\nQualidade do quique\r\nBom quique graças à câmara de ar 70 revestida a poliéster e 30 a nylon.\r\n\r\nPara um bom quique, qual a pressão indicada para uma bola de basquete?\r\nUma bola muito cheia ou muito vazia não permite obter as melhores sensações de jogo. A pressão recomendada para uma bola de basquete está claramente indicada na bola pelo fabricante. Idealmente, devemos utilizar uma bomba com manómetro para uma pressão mais precisa. Na Tarmak a pressão recomendada é a seguinte: 0,62 bar.\r\n\r\nQue tamanho de bola escolher?\r\nO tamanho da bola varia em função da idade do jogador. Tamanho 1: A partir dos 2 anos Tamanhos 3 a 5: Menina ou Menino de 4 a 6 anos Tamanho 5: Menino e Menina de 7 a 10 anos Tamanho 6: Meninos de 11 e 12 anos Tamanho 6: Mulheres Tamanho 7: Homens\r\n\r\nSabia que os produtos TARMAK são testados em laboratório e em condições de utilização reais no jogo?\r\nA equipe de desenvolvimento de produtos Tarmak está sediada no Kipstadium no Norte da França. Procura melhorar permanentemente o conforto dos jogadores e jogadoras na prática de basquete. Todos os produtos Tarmak são testados em situação real por praticantes durante várias semanas. Estes testes regulares, além das opiniões, permitem-nos fazer evoluir os produtos. As nossas equipes também realizam testes em laboratório para validar as propriedades de todos os nossos produtos\r\n\r\nGarantia do fornecedor: 24 meses",
+      "value": 149.8,
+      "discount": 0.125,
+      "stock": 123,
+      "imageUrl": "https://imgs.casasbahia.com.br/1558164818/1xg.jpg",
+      "category": "sports-and-fitness",
+      "createdAt": "2023-10-09T09:52:34.955Z",
+      "updatedAt": "2023-10-09T11:47:20.123Z"
+    }
+  },
+  {
+    "model": "app_bodega_web.product",
+    "pk": 16,
+    "fields": {
+      "name": "Tinta Acrílica Econômica Coralar Fosco Interno 18 Litros",
+      "slug": "tinta-acrílica-econômica-coralar-fosco-interno-18-litros",
+      "description": "A Tinta Acrílica Coralar da Coral é uma tinta econômica, que transmite leveza aos ambientes com uma tonalidade vibrante e acabamento fosco. Foi desenvolvida para garantir maior qualidade de aplicação e custo-benefício, perfeita para quem procura maior economia ao decorar. Indicada para uso interno.\r\nA lata de 18 litros tem rendimento de até 90m acabado com secagem rápida ao toque em 30 minutos. Recomenda-se, inicialmente, lixar e realizar a limpeza da parede para uma melhor aplicação e fixação.\r\nA Coral é uma marca do Grupo AkzoNobel, uma companhia global líder em tintas e revestimentos e uma das principais produtoras de especialidades químicas, fornecendo ingredientes, proteção e cores essenciais para indústrias e consumidores em todo o mundo.\r\n\r\nEan: 7891019138630",
+      "value": 298.99,
+      "discount": 0.0,
+      "stock": 386,
+      "imageUrl": "https://imgs.casasbahia.com.br/1554344248/1xg.jpg",
+      "category": "tools-and-construction",
+      "createdAt": "2023-10-09T09:55:54.555Z",
+      "updatedAt": "2023-10-09T09:55:54.555Z"
+    }
+  },
+  {
+    "model": "app_bodega_web.product",
+    "pk": 17,
+    "fields": {
+      "name": "Serra Circular Wap ESC 1500 com Guia Laser 1500 W",
+      "slug": "serra-circular-wap-esc-1500-com-guia-laser-1500-w",
+      "description": "Para quem busca precisão e eficiência, a Serra circular Wap ESC 1500 oferece os melhores resultados nas operações de corte de diversos materiais. De fácil manuseio, é uma ferramenta leve, que possui empunhadura emborrachada e base com ajuste de 0° até 45°, proporcionando ótima produtividade no uso.\r\n\r\nConta com potência de 1500 W, bocal direcionador de resíduos, guia paralela, disco de corte, punho auxiliar e guia Laser, tudo projetado em uma ferramenta com a qualidade que você precisa para o melhor corte possível.\r\n\r\nA Serra circular WAP ESC 1500 contém um bocal para saída de resíduos, que pode ser usado como aspirador para que a sujeira não se espalhe durante a utilização. Ao trocar o disco, você terá um botão trava eixo que facilita a operação, além de uma porta para troca da escova de carvão. Também possui o Safe System, um protetor do disco que traz mais segurança para o operador.\r\n\r\nCom cortes mais precisos, ela oferece mais cuidado no corte para trabalhos que exigem exatidão. Além disso, é fácil de transportar, tem cabo elétrico de 2 metros e vem com suporte de chave Allen, que ajuda a manter os acessórios organizados, oferecendo mais praticidade.",
+      "value": 629.0,
+      "discount": 0.4,
+      "stock": 53,
+      "imageUrl": "https://imgs.casasbahia.com.br/55062323/2g.jpg",
+      "category": "tools-and-construction",
+      "createdAt": "2023-10-09T09:57:25.185Z",
+      "updatedAt": "2023-10-09T09:57:25.185Z"
+    }
+  },
+  {
+    "model": "app_bodega_web.product",
+    "pk": 18,
+    "fields": {
+      "name": "Furadeira de Impacto Philco Force PFU01 com Mandril 3/8 - 650W",
+      "slug": "furadeira-de-impacto-philco-force-pfu01-com-mandril-3-8---650w",
+      "description": "A linha de ferramentas Force desenvolvida pela Philco, apresenta a Furadeira de Impacto PFU01. Fabricada com 650 watts de potência, a Philco Force possui empunhadura emborrachada para maior segurança e firmeza durante o uso, função impacto que melhora o desempenho na perfuração de concreto e reversão de rotação, para melhorar o retorno da broca durante a perfuração.\r\n\r\n\r\nCom a furadeira de impacto Philco, o usuário perfura concreto, madeira e aço com muita facilidade. A ferramenta apresenta diâmetro de perfuração diferente para cada superfície sendo em madeira de 20mm, concreto e aço 10mm. Além disso, tem 5 ajustes de velocidades.\r\n\r\n\r\nPara facilitar a vida do usuário, a furadeira Philco Force possui seletor para função martelete ou perfuração, trava de gatilho e acompanha chave para mandril.",
+      "value": 139.9,
+      "discount": 0.0,
+      "stock": 66,
+      "imageUrl": "https://imgs.casasbahia.com.br/12521099/1xg.jpg",
+      "category": "tools-and-construction",
+      "createdAt": "2023-10-09T09:59:04.144Z",
+      "updatedAt": "2023-10-09T09:59:04.144Z"
+    }
+  },
+  {
+    "model": "app_bodega_web.product",
+    "pk": 19,
+    "fields": {
+      "name": "Cinta Colete Corretor Postura Coluna Lombar Reforçada",
+      "slug": "cinta-colete-corretor-postura-coluna-lombar-reforçada",
+      "description": "Cinta Corretor Postura Coluna Lombar Reforçada Unissex Descrição: Diferencial: 1 - Ajuda a corrigir a má postura corporal de costas e ombros; 2 - Puxa os ombros para trás para corrigir a postura;3 - Fornece suporte para as costas;4 - Prevenção de desvios de coluna;5 - Previne dores nas costas e ombros;6 - Produto produzido com matéria prima de qualidade e com excelente acabamento.7 - Unissex, adequado para homens e mulheres de todas as idades;8 - Totalmente ajustável, confortável e fácil de usar.Especificações:modelo: yn121Cor: PretaMaterial: Neoprene, Poliéster, Elastano, AlgodãoIndicação: Corretor Postural e Suporte Lombar  Inclui:1x Cinta Postural com Suporte Lombar Ajustável, Produzida com Neoprene",
+      "value": 47.82,
+      "discount": 0.0,
+      "stock": 62,
+      "imageUrl": "https://imgs.casasbahia.com.br/1521590979/1xg.jpg",
+      "category": "health",
+      "createdAt": "2023-10-09T10:02:23.065Z",
+      "updatedAt": "2023-10-09T10:02:23.065Z"
+    }
+  },
+  {
+    "model": "app_bodega_web.product",
+    "pk": 20,
+    "fields": {
+      "name": "Umidificador Britânia BUD04B Desligamento Automático 4,8 Litros",
+      "slug": "umidificador-britânia-bud04b-desligamento-automático-4,8-litros",
+      "description": "Com capacidade de 4,8 litros de água e autonomia de 7 horas de funcionamento, o Umidificador Britânia BUD04B, é ideal para ambientes secos e refrigerados com ar condicionado. Ele auxilia na saúde respiratória amenizando sintomas da rinite, garganta seca e olhos irritados. Seu sistema ultrassônico gera nevoa fria que umidifica o ambiente trazendo mais conforto além de ter baixo consumo de energia. O BUD04B foi pensado para você que pensa na saúde e aconchego da sua família.",
+      "value": 199.9,
+      "discount": 0.25,
+      "stock": 48,
+      "imageUrl": "https://imgs.casasbahia.com.br/55014195/1xg.jpg",
+      "category": "health",
+      "createdAt": "2023-10-09T10:03:26.954Z",
+      "updatedAt": "2023-10-09T10:03:26.954Z"
+    }
+  },
+  {
+    "model": "app_bodega_web.product",
+    "pk": 21,
+    "fields": {
+      "name": "Aparelho de Pressão Digital Pulso GTech GP400",
+      "slug": "aparelho-de-pressão-digital-pulso-gtech-gp400",
+      "description": "Aparelho de Pressão Digital Pulso GTech GP400",
+      "value": 68.0,
+      "discount": 0.0,
+      "stock": 368,
+      "imageUrl": "https://imgs.casasbahia.com.br/1547558936/1xg.jpg",
+      "category": "health",
+      "createdAt": "2023-10-09T10:04:11.345Z",
+      "updatedAt": "2023-10-09T10:04:11.345Z"
+    }
+  },
+  {
+    "model": "app_bodega_web.product",
+    "pk": 22,
+    "fields": {
+      "name": "Secador de Cabelos Taiff Tourmaline Ion 2100W",
+      "slug": "secador-de-cabelos-taiff-tourmaline-ion-2100w--2",
+      "description": "A Taiff é uma marca com mais de 30 anos de sucesso consolidado pelo pioneirismo e pela produção de tecnologia. No Brasil, foi a primeira a lançar a tecnologia de íons negativos e também a primeira chapa.\r\n\r\nO secador mais querido do Brasil está renovado, com um design de arrasar. Além de contar com as tecnologias dos íons negativos e da turmaline, o New Tourmaline está mais potente, agora com 2100W, o que garante excelente resultado em pouco tempo e fios com mais brilho e maciez.\r\n\r\nO jato de ar frio fixa a modelagem e diminui o frizz e agora pode ser acionado com um click: um click liga, outro click desliga.\r\n\r\nA tampa traseira removível garante facilidade e agilidade na limpeza, proporcionando maior durabilidade do secador, e o cabo de 3 metros de comprimento permite maior mobilidade.",
+      "value": 299.0,
+      "discount": 0.0,
+      "stock": 34,
+      "imageUrl": "https://imgs.casasbahia.com.br/55030833/1xg.jpg",
+      "category": "beauty-and-self-care",
+      "createdAt": "2023-10-09T10:07:12.185Z",
+      "updatedAt": "2023-10-09T10:07:23.485Z"
+    }
+  },
+  {
+    "model": "app_bodega_web.product",
+    "pk": 23,
+    "fields": {
+      "name": "Máquina de Cortar Cabelo Wahl Home Cut Basic 9155",
+      "slug": "máquina-de-cortar-cabelo-wahl-home-cut-basic-9155",
+      "description": "Novo design e muito mais facilidade para cortar o cabelo em casa. A Máquina de Cortar Cabelo Wahl Home Cut Basic 9155 possui 8 pentes de altura, entre 3 a 25mm, para corte suaves, completo e precisos.\r\n\r\nResistentes, as lâminas são de aço com alto teor de carbono e alavanca de ajuste de altura de lâmina, que permite mais praticidade para definição de seu corte. Além de cortar, a Máquina de Cortar Cabelo Wahl Home Cut Basic 9155 define e permite fazer o acabamento tão desejado.",
+      "value": 96.0,
+      "discount": 0.12,
+      "stock": 201,
+      "imageUrl": "https://imgs.casasbahia.com.br/55002979/1g.jpg",
+      "category": "beauty-and-self-care",
+      "createdAt": "2023-10-09T10:08:23.774Z",
+      "updatedAt": "2023-10-09T10:08:23.775Z"
+    }
+  },
+  {
+    "model": "app_bodega_web.product",
+    "pk": 24,
+    "fields": {
+      "name": "Colônia Seiva Alfazema 118ml",
+      "slug": "colônia-seiva-alfazema-118ml",
+      "description": "A Colônia Seiva de Alfazema traz a combinação de essências especiais, fabricados a partir da planta alfazema, da qual se extrai o óleo de lavanda, garantindo ao corpo, uma sensação de frescor, cujo delicado e refrescante perfume de lavanda, faz a diferença. Suas propriedades acalmam e relaxam não só a cabeça como também o corpo, promovendo uma suave e agradável sensação de bem-estar.",
+      "value": 41.59,
+      "discount": 0.0,
+      "stock": 108,
+      "imageUrl": "https://imgs.casasbahia.com.br/1519774764/1xg.jpg",
+      "category": "beauty-and-self-care",
+      "createdAt": "2023-10-09T10:09:05.404Z",
+      "updatedAt": "2023-10-09T10:09:05.404Z"
+    }
+  },
+  {
+    "model": "app_bodega_web.product",
+    "pk": 25,
+    "fields": {
+      "name": "Boné Oakley Tincan Aba Curva - Camuflado",
+      "slug": "boné-oakley-tincan-aba-curva---camuflado",
+      "description": "Boné Oakley Aba Curva Fechado Tincan\r\n\r\nGênero: Masculino\r\nIndicado para: Dia a Dia\r\nEstilo da Peça: Com logo\r\nAba: Aba Curva\r\nFechamento: Com elástico\r\nMaterial: Algodão\r\nComposição: 96% Algodão 4% Elastano",
+      "value": 229.9,
+      "discount": 0.0,
+      "stock": 122,
+      "imageUrl": "https://imgs.casasbahia.com.br/1560483052/1xg.jpg",
+      "category": "fashion",
+      "createdAt": "2023-10-09T10:12:02.144Z",
+      "updatedAt": "2023-10-09T10:12:02.144Z"
+    }
+  },
+  {
+    "model": "app_bodega_web.product",
+    "pk": 26,
+    "fields": {
+      "name": "Short Masculino Try Basics Masculino Liso Básico Tactel",
+      "slug": "short-masculino-try-basics-masculino-liso-básico-tactel",
+      "description": "Chegou o Short da moda neste verão. Seu cós elástico, com amarração para ajuste, garante melhor praticidade ao vestir. Sua composição, em poliéster, proporciona secagem rápida. A peça pode ser utilizada tanto no ambiente praia e piscina, quanto para compor looks para o dia a dia.\r\n\r\nShorts Masculino;\r\nCós Elástico;\r\nAmarração para Ajuste;\r\n02 Bolsos laterais;\r\n01 Bolso traseiro;\r\nTecido: Tactel;\r\nComposição: 100% Poliéster.\r\n\r\nTABELA DE TAMANHOS:\r\nP: 36 a 38;\r\nM: 40 a 42;\r\nG: 44;\r\nGG: 46.\r\n\r\n\r\nMarca: Try Basics",
+      "value": 27.9,
+      "discount": 0.0,
+      "stock": 15,
+      "imageUrl": "https://imgs.casasbahia.com.br/1536350939/1xg.jpg",
+      "category": "fashion",
+      "createdAt": "2023-10-09T10:18:15.565Z",
+      "updatedAt": "2023-10-09T10:18:15.565Z"
+    }
+  },
+  {
+    "model": "app_bodega_web.product",
+    "pk": 27,
+    "fields": {
+      "name": "Armação De Óculos Colcci C6126b9154 Rosa Translúcido",
+      "slug": "armação-de-óculos-colcci-c6126b9154-rosa-translúcido",
+      "description": "- Características\r\nMaterial da Armação: Acetato\r\nMaterial da Hastes: Metal\r\nCor da Armação: Rosa\r\nCor das Hastes: Dourado\r\nMola na Haste da Armação: Não\r\nLinha da Armação: Receituário\r\nAcabamento da Cor: Translúcido\r\nModelo da Armação: Aro Fechado\r\nForma da Armação: Redondo\r\nGênero da Armação: Feminino\r\nApoio no Nariz: Sem Plaquetas\r\nTamanho da Armação: M\r\n\r\n- Medidas\r\nMedida Lente Horizontal: 54 mm\r\nMedida Lente Vertical: 43 mm\r\nMedida de Haste a Haste: 138 mm\r\nMedida Frontal: 140 mm\r\nComprimento da Haste: 135 mm\r\nPonte: 21 mm\r\nCurva Base: 4\r\n\r\n- Itens Inclusos\r\nÓculos\r\nEstojo\r\nFlanela\r\nCertificado de Garantia\r\nNota Fiscal",
+      "value": 229.95,
+      "discount": 0.0,
+      "stock": 22,
+      "imageUrl": "https://imgs.casasbahia.com.br/1541112752/1xg.jpg",
+      "category": "fashion",
+      "createdAt": "2023-10-09T10:19:16.464Z",
+      "updatedAt": "2023-10-09T10:19:16.464Z"
+    }
+  },
+  {
+    "model": "app_bodega_web.product",
+    "pk": 28,
+    "fields": {
+      "name": "Talco Johnsons´s Baby Hora Do Sono 200gr",
+      "slug": "talco-johnsons´s-baby-hora-do-sono-200gr",
+      "description": "O talco johnson's baby hora do sono 200g possui fragrância com essências natural calm que ajudam o bebê a relaxar e dormir tranquilo. Dermatologicamente testado e hipoalergênico. Contém a exclusiva essência natural calm. Proporciona uma agradável isenção de relaxamento",
+      "value": 30.0,
+      "discount": 0.0,
+      "stock": 70,
+      "imageUrl": "https://imgs.casasbahia.com.br/1546451385/1xg.jpg",
+      "category": "babies",
+      "createdAt": "2023-10-09T10:21:28.274Z",
+      "updatedAt": "2023-10-09T10:21:28.274Z"
+    }
+  },
+  {
+    "model": "app_bodega_web.product",
+    "pk": 29,
+    "fields": {
+      "name": "Fralda Pampers Confort Sec Giga XXG - 120 Unidades",
+      "slug": "fralda-pampers-confort-sec-giga-xxg---120-unidades",
+      "description": "A nova Pampers conta com Canais de Ar que permitem que o ar circule livremente dentro da fralda. Assim o bumbum fica menos abafado e a pele mais arejada e sequinha durante todo o uso! Diga adeus a assaduras e desconforto do bebê!\r\n\r\nAlém disso, conta com Barreiras Antivazamentos Reforçadas, uma nova tecnologia que se adapta suavemente ao redor das pernas do seu bebê, proporcionando um ajuste cômodo e flexível para uma proteção anti vazamentos todas as noites.",
+      "value": 244.0,
+      "discount": 0.0,
+      "stock": 68,
+      "imageUrl": "https://imgs.casasbahia.com.br/55007786/1xg.jpg",
+      "category": "babies",
+      "createdAt": "2023-10-09T10:22:43.684Z",
+      "updatedAt": "2023-10-09T10:22:43.684Z"
+    }
+  },
+  {
+    "model": "app_bodega_web.product",
+    "pk": 30,
+    "fields": {
+      "name": "Carrinho de Bebê Milano Reversível Ii Galzerano",
+      "slug": "carrinho-de-bebê-milano-reversível-ii-galzerano",
+      "description": "Proporcione ao seu bebê um passeio confortável e aconchegante!\r\nO Carrinho de Bebê Galzerano Milano Reversível conta com cabo reversível, assento reclinável em 4 posições e capota removível e retrátil. Além disso, dispõe de tecido removível e lavável, bandeja do bebê com porta copos, removível e fácil encaixe e cinto de segurança de 5 pontas para maior segurança do bebê.\r\n\r\nCaracterísticas gerais\r\nCarro berço - passeio destinado para crianças a partir de 0 meses com peso até 15 kg;\r\nEstrutura em Aço\r\nTecido removível e lavável\r\nEncosto regulável em 4 posições\r\nCabo reversível\r\nCinto de segurança 5 pontos\r\nBolso traseiro\r\nProtetor de ombro\r\nAcolchoado dupla face\r\nBandeja do bebê com porta copos, removível e fácil encaixe\r\n4 Rodas dianteiras giratórias com duplo sistema de freio\r\nEixos dianteiros removíveis\r\n4 Rodas traseiras com duplo sistema de freio\r\nEixos traseiros removíveis\r\nCapota removível e retrátil\r\nVisor na capota\r\nVisor na cabeceira do cesto\r\nTrava de Segurança\r\nDesarme automático do encosto no fechamento do carrinho\r\nComposição Têxtil do acolchoado 100 poliéster\r\nComposição Têxtil do emborrachado 100 PVC\r\nAcopla o DRC 8181. -vendido separadamente-\r\nProduto Certificado NBR 14389\r\n\r\nCertificado pelo INMETROSim\r\nPeso suportado -kg-Até 15kg\r\nEncosto regulável: sim\r\nLavável: sim\r\nCinto de segurança ajustável: sim\r\n\r\nEspecificações Técnicas\r\nQuantidade de rodas: 8\r\nMaterial: Estrutura em aço/ Composição Têxtil 100 poliéster\r\nIdade recomendada: A partir de 0 meses com peso até 15 kg\r\n\r\nConteúdo da embalagem:\r\n1- Carrinho de Bebê Galzerano Milano Reversível - 0 a 15kg\r\n\r\nDimensões\r\nAltura: 101 cm\r\nLargura: 51 cm\r\nProfundidade: 89 cm\r\nPeso: 9,6 Kg\r\n\r\nGarantia do fornecedor de 12 meses",
+      "value": 629.0,
+      "discount": 0.1,
+      "stock": 41,
+      "imageUrl": "https://imgs.casasbahia.com.br/1549160076/1xg.jpg",
+      "category": "babies",
+      "createdAt": "2023-10-09T10:25:08.584Z",
+      "updatedAt": "2023-10-09T10:25:08.584Z"
+    }
+  },
+  {
+    "model": "app_bodega_web.product",
+    "pk": 31,
+    "fields": {
+      "name": "Helicóptero com Controle - Extremos e Remotos - Leão - Toyng",
+      "slug": "helicóptero-com-controle---extremos-e-remotos---leão---toyng--2",
+      "description": "Helicóptero com Controle - Extremos e Remotos - Leão - Toyng: O Helicóptero Extremos e Remotos é um incrível helicóptero de brinquedo controlado através de controle infravermelho que vai garantir muita diversão para você! O helicóptero permite muita liberdade no ar, podendo voar para cima, para baixo, para esquerda e para a direita utilizando seu controle. O mecanismo de funcionamento é através de quatro hélices que proporcionam uma ótima estabilidade que permite voos incríveis. \r\n\r\nInformações:\r\n• Produto: Helicóptero com controle Extremos e Remotos\r\n• Marca: Toyng\r\n• Modelo: Leão\r\n• Coleção: Extremos e Remotos\r\n• Tipo: Helicóptero de brinquedo\r\n• Categoria: Carrinhos e Cia\r\n• Conteúdo: 01 Helicóptero e 01 Cabo USB\r\n• Recomendação: para crianças a partir de 06 anos de idade\r\n\r\nEspecificações:\r\n• Referência: 48729\r\n• Código de Barras: 7899871619304\r\n• Embalagem (C x A x L): 30 x 15 x 06 cm\r\n• Embalagem (Peso): 0.150 g\r\n• Material / Composição: Polipropileno e Acrilonitrila Butadieno Estireno\r\n• Alimentação: 03 Pilhas AA (Não Inclusas)\r\n• Registro: 010770/2022\r\n• Certificado: Órgãos Autorizados - OCP´S (Organismos de Certificação de Produtos)",
+      "value": 209.0,
+      "discount": 0.0,
+      "stock": 67,
+      "imageUrl": "https://ak1.ostkcdn.com/images/products/MLB10865187.jpg?impolicy=medium",
+      "category": "toys",
+      "createdAt": "2023-10-09T10:29:38.715Z",
+      "updatedAt": "2023-10-09T10:42:14.156Z"
+    }
+  },
+  {
+    "model": "app_bodega_web.product",
+    "pk": 32,
+    "fields": {
+      "name": "Estilingue profissional com apoio de pulso",
+      "slug": "estilingue-profissional-com-apoio-de-pulso",
+      "description": "O apoio de braço a faz ficar estabilizada e melhora o acerto nos tiros.\r\n\r\nEspecificações:\r\nPeso aproximado de 90gr.\r\nBorracha de alta elasticidade.\r\nMuniciador em couro.\r\nPartes em metal com pintura preta.\r\nEmpunhadura em plástic ABS.\r\nApoio de braço\r\nEste é um esporte que trabalha a concentração, a coordenação motora, o equilíbrio físico e mental.\r\nEste equipamento não é um brinquedo e não deve ser usado como tal e sim como um instrumento para a prática de um esporte\r\nsério que exige maturidade e disciplina para um uso correto e seguro.",
+      "value": 41.42,
+      "discount": 0.0,
+      "stock": 58,
+      "imageUrl": "https://imgs.casasbahia.com.br/7110230/1xg.jpg",
+      "category": "toys",
+      "createdAt": "2023-10-09T10:30:47.854Z",
+      "updatedAt": "2023-10-09T10:30:47.854Z"
+    }
+  },
+  {
+    "model": "app_bodega_web.product",
+    "pk": 33,
+    "fields": {
+      "name": "Massa de Modelar Play-Doh Hasbro Pote Individual - 112g",
+      "slug": "massa-de-modelar-play-doh-hasbro-pote-individual---112g",
+      "description": "Com a Massa de Modelar Play-Doh da Hasbro os pequenos poderão deixar a imaginação mandar!\r\n\r\nA incrível massinha de modelar Play-Doh é perfeita para estimular a imaginação dos pequenos, incentivando-os a fazer magnificas criações, desenvolvendo a criatividade, a coordenação motora e o raciocínio para novos formatos.\r\n\r\nEsse pote individual conta com 112 gramas de massinha, ideal para ser combinado com outras cores vendidas separadamente, permitindo inúmeras criações.\r\n\r\nE papais e mamães podem ficar tranquilos, pois elas não grudam, não mancham e não são tóxicas, promovendo uma brincadeira muito mais divertida, segura e livre de preocupações.\r\n\r\nObs:\r\n- Cores sortidas: enviado apenas 1 unidade, de forma aleatória, de acordo com disponibilidade no estoque;\r\n- Não é possível escolher a cor do produto.",
+      "value": 7.99,
+      "discount": 0.0,
+      "stock": 764,
+      "imageUrl": "https://imgs.casasbahia.com.br/11794768/1xg.jpg",
+      "category": "toys",
+      "createdAt": "2023-10-09T10:31:30.564Z",
+      "updatedAt": "2023-10-09T10:31:30.564Z"
+    }
+  },
+  {
+    "model": "app_bodega_web.product",
+    "pk": 34,
+    "fields": {
+      "name": "Carburador de foguete",
+      "slug": "carburador-de-foguete",
+      "description": "Compatível com foguetes mais antigos como: \r\n- Juno I\r\n- Saturno I\r\n- Saturno V\r\nEntre muitos outros\r\n\r\nPerfeito para o seu foguete espacial fazer ZUUUUMMMMMMMMMM!!",
+      "value": 10500.0,
+      "discount": 0.0,
+      "stock": 2,
+      "imageUrl": "https://m.media-amazon.com/images/I/61IOnzkexHL._AC_UF350,350_QL80_.jpg",
+      "category": "aerospace",
+      "createdAt": "2023-10-09T10:40:11.484Z",
+      "updatedAt": "2023-10-09T10:40:11.485Z"
+    }
+  },
+  {
+    "model": "app_bodega_web.product",
+    "pk": 37,
+    "fields": {
+      "name": "Bomba atômica Tsar :D",
+      "slug": "bomba-atômica-tsar-:d",
+      "description": "Perfeita para fazer o seu inimigo de guerra se render INSTANTANEAMENTE!\r\n\r\nPeso: 27 ton\r\nComprimento: 8 m\r\nDiâmetro: 2 m\r\nPoder explosivo: 50 a 57 megatons",
+      "value": 88888888888.0,
+      "discount": 0.25,
+      "stock": 1,
+      "imageUrl": "https://p.turbosquid.com/ts-thumb/3L/n5UyAN/63/tsar_bomba_an602_on_cart_360/jpg/1682311459/600x600/turn_fit_q87/9057e410fd845a343b33e8c48ab6bba5108b25ab/tsar_bomba_an602_on_cart_360-1.jpg",
+      "category": "military",
+      "createdAt": "2023-10-09T10:56:55.274Z",
+      "updatedAt": "2023-10-09T11:23:31.336Z"
+    }
+  },
+  {
+    "model": "app_bodega_web.product",
+    "pk": 38,
+    "fields": {
+      "name": "Urinol Pinico Adulto Esmaltado Ewel Branco Nº 24 - 3,2 L",
+      "slug": "urinol-pinico-adulto-esmaltado-ewel-branco-nº-24---3,2-l",
+      "description": "O Urinol Esmaltado Ewel tem 24 cm de diametro E produzido em aco revestido interna e externamente com dupla camada de esmalte de alta retencao de calor e durabilidade Sua vida util pode ser prolongada ainda mais se for utilizado utensilios de plastico madeira ou silicone Produto atoxico ou seja nao ha contaminacao dos alimentos por residuos metalicos Cabo em aco esmaltado Pequenos pontos nas pecas nao sao considerados defeito e sim caracteristicas do processo produtivo",
+      "value": 121.0,
+      "discount": 0.0,
+      "stock": 12,
+      "imageUrl": "https://imgs.casasbahia.com.br/1524121662/1xg.jpg",
+      "category": "house-and-furniture",
+      "createdAt": "2023-10-09T11:26:28.077Z",
+      "updatedAt": "2023-10-09T11:26:28.077Z"
+    }
+  },
+  {
+    "model": "app_bodega_web.address",
+    "pk": 1,
+    "fields": {
+      "state": "AC",
+      "city": "Cafundós",
+      "district": "Algum lugar",
+      "street": "Rua da Volta Dos Que Não Foram",
+      "number": "000"
     }
   }
 ]

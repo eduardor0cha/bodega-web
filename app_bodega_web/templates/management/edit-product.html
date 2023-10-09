@@ -6,8 +6,8 @@
   <span>Produto não encontrado</span>
   {% else %}
   <h2 class="p-edit-product__heading">Editar produto</h2>
-  <form class="p-edit-product__form" id="p-edit-product__form" method="post"
-    action="{% url 'edit-product' product.id %}">
+  <form class="p-edit-product__form" id="p-edit-product__form" method="POST"
+    action="{% url 'edit-product' product.id %}" autocomplete="off">
     {% csrf_token %}
     <div class="c-input">
       <label>

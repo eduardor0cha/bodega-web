@@ -15,12 +15,12 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
   document.onclick = function (e) {
-    if (!document.getElementById("c-account-menu__profile-pic").contains(e.target) && !document.getElementById("c-account-menu__card").contains(e.target)) {
-      document.getElementById("c-account-menu__card").classList.add("hidden")
+    if (!document.getElementById("c-account-menu__profile-pic")?.contains(e.target) && !document.getElementById("c-account-menu__card")?.contains(e.target)) {
+      document.getElementById("c-account-menu__card")?.classList.add("hidden")
     };
 
-    if (!document.getElementById("c-sidebar").contains(e.target) && !document.getElementById("c-header__open-sidebar-button").contains(e.target)) {
-      document.getElementById("c-sidebar").classList.add("hidden")
+    if (!document.getElementById("c-sidebar")?.contains(e.target) && !document.getElementById("c-header__open-sidebar-button")?.contains(e.target)) {
+      document.getElementById("c-sidebar")?.classList.add("hidden")
     };
   };
 });

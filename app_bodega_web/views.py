@@ -117,8 +117,13 @@ def home(request):
                 category__exact=selectedCategory)
 
         if (len(products) != 0):
-            products = sorted(products, key=lambda x: x.value *
-                              x.discount, reverse=True)
+            list1 = list(filter(lambda x: (x.value * x.discount) !=
+                         0, products))
+            list1.sort(key=lambda x: x.value * x.discount, reverse=True)
+            list2 = list(filter(lambda x: (x.value * x.discount) ==
+                         0, products))
+            list2.sort(key=lambda x: x.name)
+            products = list1 + list2
 
         return render(request, "user/home.html", {"products": products, "searchFor": searchFor or "", "selectedCategory": selectedCategory, "selectedCategoryLabel": selectedCategoryLabel, "isCategoryValid": isCategoryValid})
 
@@ -319,7 +324,7 @@ def homeManagement(request):
     products = []
 
     if (searchFor == None):
-        products = Product.objects.all().order_by("name").values()
+        products = Product.objects.all().order_by("stock").values()
     else:
         products = Product.objects.filter(
             name__icontains=searchFor).order_by("name").values()

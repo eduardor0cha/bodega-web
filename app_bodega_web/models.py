@@ -5,6 +5,7 @@ from django.contrib.auth import get_user_model
 def generateUniqueSlug(productName):
     slug = "-".join(str(productName).split())
     slug = slug.lower()
+    slug = slug.replace("/", "-")
 
     index = 1
     slugBase = slug
